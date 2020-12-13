@@ -1,0 +1,279 @@
+{
+    "success": true,
+    "data": {
+        "model": {
+            "id": "970",
+            "createdAt": "2017-07-07T22:09:24.000Z",
+            "updatedAt": "2018-01-19T17:01:15.000Z",
+            "nombre": "Alpha Renta Fija Serie 1 - Clase C",
+            "inversionMinima": "1000",
+            "honorarioIngreso": 0,
+            "honorarioRescate": 0,
+            "honorarioTransferencia": 0,
+            "honorarioAdministracionGerente": 3.735,
+            "honorarioAdministracionDepositaria": 0.415,
+            "gastoOrdinarioGestion": 0,
+            "honorarioExito": false,
+            "monedaId": "1",
+            "rg384": false,
+            "liquidez": true,
+            "suscripcion": true,
+            "reexpresa": false,
+            "nulo": false,
+            "tipoClaseId": "1",
+            "fondoId": "96",
+            "tickerBloomberg": null,
+            "tickerISIN": null,
+            "tickerFIGI": null,
+            "repatriacion": null,
+            "fondo": {
+                "clasificacionVieja": "Renta Fija",
+                "regionVieja": "Argentina",
+                "horizonteViejo": "Mediano Plazo",
+                "tipoEscision": "No aplicable",
+                "id": "96",
+                "createdAt": "2017-07-07T22:09:18.000Z",
+                "updatedAt": "2018-01-19T16:59:41.000Z",
+                "nombre": "Alpha Renta Fija Serie 1",
+                "codigoCNV": "112",
+                "objetivo": "",
+                "resolucionParticular": "16541     ",
+                "fechaResolucionParticular": "2011-04-06T00:00:00.000Z",
+                "fechaInscripcionRPC": "1990-01-01T00:00:00.000Z",
+                "estado": "1",
+                "etapaLiquidacion": null,
+                "tipoRentaId": "3",
+                "monedaId": "1",
+                "regionId": "1",
+                "durationId": "5",
+                "benchmarkId": "11",
+                "mmIndice": false,
+                "mmPuro": false,
+                "valuacion": "M",
+                "ci49": false,
+                "diasLiquidacion": "2",
+                "indice": false,
+                "horizonteId": "2",
+                "sociedadGerenteId": "8",
+                "sociedadDepositariaId": "62",
+                "inicio": "1994-12-01T00:00:00.000Z",
+                "tipoFondoId": "1",
+                "tipoDinero": "No Aplica",
+                "tipoRentaMixtaId": null,
+                "excentoTasa": false,
+                "d569": false,
+                "d569FondoId": null,
+                "horizonte": {
+                    "id": "2",
+                    "createdAt": "2017-07-07T22:09:10.000Z",
+                    "updatedAt": "2017-07-07T22:09:10.000Z",
+                    "nombre": "Mediano Plazo",
+                    "codigoCNV": "MED"
+                },
+                "tipoFondo": {
+                    "id": "1",
+                    "createdAt": "2017-07-07T22:09:09.000Z",
+                    "updatedAt": "2017-07-07T22:09:09.000Z",
+                    "nombre": "Abierto"
+                },
+                "moneda": {
+                    "id": "1",
+                    "createdAt": "2017-07-07T22:00:53.000Z",
+                    "updatedAt": "2017-07-07T22:00:53.000Z",
+                    "nombre": "Peso Argentina",
+                    "codigoCafci": "ARS",
+                    "idCNV": "1"
+                },
+                "duration": {
+                    "id": "5",
+                    "createdAt": "2017-07-07T22:09:10.000Z",
+                    "updatedAt": "2017-07-07T22:09:10.000Z",
+                    "nombre": "Mayor a 3 Años",
+                    "codigoCafci": "DM3",
+                    "orden": "D  "
+                },
+                "tipoRenta": {
+                    "id": "3",
+                    "createdAt": "1990-01-01T00:00:00.000Z",
+                    "updatedAt": "1990-01-01T00:00:00.000Z",
+                    "nombre": "Renta Fija",
+                    "codigoCafci": "RF",
+                    "orden": "B  ",
+                    "parametroPorcentual": 5
+                },
+                "tipoRentaMixta": null,
+                "region": {
+                    "id": "1",
+                    "createdAt": "2017-07-07T22:09:10.000Z",
+                    "updatedAt": "2017-07-07T22:09:10.000Z",
+                    "nombre": "Argentina",
+                    "codigoCafci": "ARG",
+                    "orden": "B  "
+                },
+                "benchmark": {
+                    "id": "11",
+                    "createdAt": "2017-07-07T22:09:10.000Z",
+                    "updatedAt": "2017-07-07T22:09:10.000Z",
+                    "nombre": "Otro",
+                    "codigoCafci": "OTRO",
+                    "orden": "Z  "
+                },
+                "depositaria": {
+                    "id": "62",
+                    "createdAt": "2017-07-07T21:59:22.000Z",
+                    "updatedAt": "2017-07-07T21:59:22.000Z",
+                    "calle": "Florida",
+                    "numero": 99,
+                    "piso": "-   ",
+                    "depto": "-   ",
+                    "codigoPostal": "1005",
+                    "localidad": "Buenos Aires",
+                    "provincia": "Ciudad Autónoma de Buenos Aires",
+                    "miembro": false,
+                    "miembroDesde": null,
+                    "causaBaja": " ",
+                    "razonSocial": "\u0000",
+                    "cuit": "\u0000          ",
+                    "presidente": "No Registra",
+                    "justiciaFecha": null,
+                    "justiciaLegal": null,
+                    "nombre": "ICBC (Arg) S.A.",
+                    "nombreCorto": "ICBC (Arg) S.A.",
+                    "urlCNV": null,
+                    "codigoCafciCalificadora": null,
+                    "codigoCNV": "30305",
+                    "paisId": "2",
+                    "actividadId": "2",
+                    "ivaEntidadId": "1",
+                    "cierreEjercicioEntidadId": "1",
+                    "fusionId": null
+                },
+                "gerente": {
+                    "id": "8",
+                    "createdAt": "2017-07-07T21:59:22.000Z",
+                    "updatedAt": "2019-12-17T21:08:04.000Z",
+                    "calle": "Bvd Cecilia Grierson",
+                    "numero": 355,
+                    "piso": "14  ",
+                    "depto": ".   ",
+                    "codigoPostal": ".",
+                    "localidad": "Capital Federal",
+                    "provincia": "Buenos Aires",
+                    "miembro": true,
+                    "miembroDesde": "2005-06-07T00:00:00.000Z",
+                    "causaBaja": " .",
+                    "razonSocial": "ICBC Investments Argentina S.A.S.G.F.C.I.",
+                    "cuit": "30585058781",
+                    "presidente": "Marcelo José Otermin",
+                    "justiciaFecha": null,
+                    "justiciaLegal": null,
+                    "nombre": "ICBC Investments Argentina S.A.S.G.F.C.I.",
+                    "nombreCorto": "ICBC Invest.",
+                    "urlCNV": "http://www.cnv.gov.ar/InfoFinan/fondos/InfoFondos.asp?Lang=0&CodiSoc=70120&DescriSoc=Standard%20Investments%20S.A.%20Sociedad%20Gerente%20de%20Fondos%20Comunes%20de%20%20Inversión&Letra=",
+                    "codigoCafciCalificadora": null,
+                    "codigoCNV": "154",
+                    "paisId": "2",
+                    "actividadId": "13",
+                    "ivaEntidadId": "2",
+                    "cierreEjercicioEntidadId": "10",
+                    "fusionId": null
+                }
+            }
+        },
+        "info": {
+            "mensual": {
+                "honorariosComisiones": {
+                    "minimoInversion": 1,
+                    "honorariosAdministracionGerente": "0.0000",
+                    "honorariosAdministracionDepositaria": "0.0000",
+                    "honorariosExito": "N",
+                    "gastosGestion": "0.0000",
+                    "comisionIngreso": "0.0000",
+                    "comisionRescate": "0.0000",
+                    "comisionTransferencia": "0.0000"
+                }
+            },
+            "semanal": {
+                "interfazId": "1253598",
+                "fechaDatos": "20/11/2020",
+                "carteras": [{
+                        "nombreActivo": "ON YPF Serie 43",
+                        "share": "2.105"
+                    },
+                    {
+                        "nombreActivo": "FCI Allaria Ahorro - Clase C",
+                        "share": "0.158"
+                    },
+                    {
+                        "nombreActivo": "Bono Boncer 2021 TC21",
+                        "share": "21.946"
+                    },
+                    {
+                        "nombreActivo": "ON YPF Energia Elect. Cl1",
+                        "share": "1.283"
+                    },
+                    {
+                        "nombreActivo": "Ishares JP Morgan EM Bond Ucits ETF",
+                        "share": "8.081"
+                    },
+                    {
+                        "nombreActivo": "Bono CER TX21",
+                        "share": "28.517"
+                    },
+                    {
+                        "nombreActivo": "Bono Boncer 2022 TX22",
+                        "share": "28.410"
+                    },
+                    {
+                        "nombreActivo": "Bonos Rep Argentina 2029",
+                        "share": "0.508"
+                    },
+                    {
+                        "nombreActivo": "Bonos Rep Argentina AE38",
+                        "share": "8.178"
+                    },
+                    {
+                        "nombreActivo": "Cta Cte $ ICBC",
+                        "share": "0.041"
+                    },
+                    {
+                        "nombreActivo": "Cta Cte U$S ICBC",
+                        "share": "0.046"
+                    },
+                    {
+                        "nombreActivo": "Cta Cte $ Rem Bco Supervi",
+                        "share": "0.000"
+                    },
+                    {
+                        "nombreActivo": "Cta Cte U$S Bank Amer NY",
+                        "share": "0.004"
+                    },
+                    {
+                        "nombreActivo": "Fut Rofex DLR112020",
+                        "share": "76.448"
+                    },
+                    {
+                        "nombreActivo": "Fut Reg ARS",
+                        "share": "-76.448"
+                    },
+                    {
+                        "nombreActivo": "Cheque Gar.AVFE 00014",
+                        "share": "0.180"
+                    },
+                    {
+                        "nombreActivo": "Cheque Gar.AVFE 00014",
+                        "share": "0.180"
+                    },
+                    {
+                        "nombreActivo": "Cheque Gar.AVFE 00014",
+                        "share": "0.179"
+                    },
+                    {
+                        "nombreActivo": "Cheque Gar.AVFE 00014",
+                        "share": "0.181"
+                    }
+                ]
+            }
+        }
+    }
+}

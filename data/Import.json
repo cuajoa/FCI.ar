@@ -1,0 +1,87 @@
+{
+    "success": true,
+    "data": [{
+            "id": "1",
+            "createdAt": "1990-01-01T00:00:00.000Z",
+            "updatedAt": "1990-01-01T00:00:00.000Z",
+            "nombre": "<Sin Asignar>",
+            "codigoCafci": "SAsig",
+            "orden": "ZZZ",
+            "parametroPorcentual": 0
+        },
+        {
+            "id": "2",
+            "createdAt": "1990-01-01T00:00:00.000Z",
+            "updatedAt": "1990-01-01T00:00:00.000Z",
+            "nombre": "Renta Variable",
+            "codigoCafci": "RV",
+            "orden": "A  ",
+            "parametroPorcentual": 5
+        },
+        {
+            "id": "3",
+            "createdAt": "1990-01-01T00:00:00.000Z",
+            "updatedAt": "1990-01-01T00:00:00.000Z",
+            "nombre": "Renta Fija",
+            "codigoCafci": "RF",
+            "orden": "B  ",
+            "parametroPorcentual": 5
+        },
+        {
+            "id": "4",
+            "createdAt": "1990-01-01T00:00:00.000Z",
+            "updatedAt": "1990-01-01T00:00:00.000Z",
+            "nombre": "Mercado de Dinero",
+            "codigoCafci": "DD",
+            "orden": "G  ",
+            "parametroPorcentual": 0.5
+        },
+        {
+            "id": "5",
+            "createdAt": "1990-01-01T00:00:00.000Z",
+            "updatedAt": "1990-01-01T00:00:00.000Z",
+            "nombre": "Renta Mixta",
+            "codigoCafci": "FM",
+            "orden": "C  ",
+            "parametroPorcentual": 5
+        },
+        {
+            "id": "6",
+            "createdAt": "1990-01-01T00:00:00.000Z",
+            "updatedAt": "1990-01-01T00:00:00.000Z",
+            "nombre": "PyMes",
+            "codigoCafci": "FP",
+            "orden": "D  ",
+            "parametroPorcentual": 5
+        },
+        {
+            "id": "7",
+            "createdAt": "1990-01-01T00:00:00.000Z",
+            "updatedAt": "1990-01-01T00:00:00.000Z",
+            "nombre": "Retorno Total",
+            "codigoCafci": "TR",
+            "orden": "F  ",
+            "parametroPorcentual": 0.5
+        },
+        {
+            "id": "8",
+            "createdAt": "1990-01-01T00:00:00.000Z",
+            "updatedAt": "1990-01-01T00:00:00.000Z",
+            "nombre": "Infraestructura",
+            "codigoCafci": "FI",
+            "orden": "E  ",
+            "parametroPorcentual": 5
+        },
+        {
+            "id": "9",
+            "createdAt": "2019-06-06T10:51:34.000Z",
+            "updatedAt": "2019-06-06T10:51:34.000Z",
+            "nombre": "Fondos Cerrados",
+            "codigoCafci": "F",
+            "orden": "FFF",
+            "parametroPorcentual": 0
+        }
+    ],
+    "page": 0,
+    "lastPage": 0
+}
