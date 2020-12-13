@@ -5,32 +5,15 @@
 import requests
 from bson import Decimal128 as Decimal
 from pymongo import MongoClient
-from datetime import date, datetime
-
-class MongoDB(object):
-    def __init__(self, host='localhost', port=27017, database_name='fciar', collection_name=None):
-        try:
-            self._connection = MongoClient(host=host, port=port, maxPoolSize=200)
-        except Exception as error:
-            raise Exception(error)
-        self._database = None
-        self._collection = None
-        if database_name:
-            self._database = self._connection[database_name]
-        if collection_name:
-            self._collection = self._database[collection_name]
-
-    def insert(self, post):
-        # add/append/new single record
-        post_id = self._collection.insert_one(post).inserted_id
-        return post_id
+from datetime import datetime
+from common.connection import MongoDB
 
 # Consulto los fondos para traer la ficha
 mongo_db = MongoClient()
 db = mongo_db.fciar
 db_clases = db.clases
 
-print("start @ " + str(date.now().strftime("%Y-%m-%d %H:%M:%S")))
+print("start @ " + str(datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
 for item in db_clases.find():
     fondo_id=item["fondo_id"]
     clase_id=item["clase_id"]
@@ -102,4 +85,4 @@ for item in db_clases.find():
         
 
 mongo_db.close()
-print("end @ " + str(date.now().strftime("%Y-%m-%d %H:%M:%S")))
+print("end @ " + str(datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
