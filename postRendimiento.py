@@ -56,7 +56,6 @@ def getTop3(tipo_rentaParam):
     return message_post
 
 def getFCIBilleteras():
-    #Obtengo el top 3 de los fondos Mercado de Dinero id=3
     fecha_hasta=datetime.today()- timedelta(days=1)
 
     fecha_desde=getFechaDesde(fecha_hasta)
@@ -66,11 +65,9 @@ def getFCIBilleteras():
     message_post_wallet="Rendimiento FCIs Billeteras del "+ fecha_publish+"\n\n"
     i=0
     for item in curs:
-        # diario= item["rendimientos"]["day"]
-        # mensual= item["rendimientos"]["month"]
         fondo_id= item["fondo_id"]
 
-        message_post_wallet += getMessageToPost(item) #item["nombre"] + "\nDiario: " + str(diario["rendimiento"]) + "% | Mes: " +mensual["rendimiento"] + "% | TNA: "+ mensual["tna"] + "\n"
+        message_post_wallet += getMessageToPost(item)
         
         if fondo_id=="443":
             message_post_wallet += "@uala_arg @GRUPOSBSOK\n\n"
