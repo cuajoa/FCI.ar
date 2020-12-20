@@ -2,27 +2,27 @@
     "success": true,
     "data": {
         "model": {
-            "id": "970",
-            "createdAt": "2017-07-07T22:09:24.000Z",
-            "updatedAt": "2018-01-19T17:01:15.000Z",
-            "nombre": "Alpha Renta Fija Serie 1 - Clase C",
+            "id": "1785",
+            "createdAt": "2017-10-24T13:01:13.000Z",
+            "updatedAt": "2019-04-10T17:04:06.000Z",
+            "nombre": "Balanz Ahorro en Dolares - Clase D",
             "inversionMinima": "1000",
             "honorarioIngreso": 0,
             "honorarioRescate": 0,
             "honorarioTransferencia": 0,
-            "honorarioAdministracionGerente": 3.735,
-            "honorarioAdministracionDepositaria": 0.415,
+            "honorarioAdministracionGerente": 0,
+            "honorarioAdministracionDepositaria": 0.15,
             "gastoOrdinarioGestion": 0,
             "honorarioExito": false,
-            "monedaId": "1",
+            "monedaId": "2",
             "rg384": false,
             "liquidez": true,
             "suscripcion": true,
             "reexpresa": false,
             "nulo": false,
             "tipoClaseId": "1",
-            "fondoId": "96",
-            "tickerBloomberg": null,
+            "fondoId": "787",
+            "tickerBloomberg": "BALADOD AR",
             "tickerISIN": null,
             "tickerFIGI": null,
             "repatriacion": null,
@@ -31,32 +31,32 @@
                 "regionVieja": "Argentina",
                 "horizonteViejo": "Mediano Plazo",
                 "tipoEscision": "No aplicable",
-                "id": "96",
-                "createdAt": "2017-07-07T22:09:18.000Z",
-                "updatedAt": "2018-01-19T16:59:41.000Z",
-                "nombre": "Alpha Renta Fija Serie 1",
-                "codigoCNV": "112",
-                "objetivo": "",
-                "resolucionParticular": "16541     ",
-                "fechaResolucionParticular": "2011-04-06T00:00:00.000Z",
-                "fechaInscripcionRPC": "1990-01-01T00:00:00.000Z",
+                "id": "787",
+                "createdAt": "2017-10-24T12:43:50.000Z",
+                "updatedAt": "2020-01-20T18:36:59.000Z",
+                "nombre": "Balanz Ahorro en Dolares",
+                "codigoCNV": "876",
+                "objetivo": null,
+                "resolucionParticular": "18307",
+                "fechaResolucionParticular": "2016-10-27T03:00:00.000Z",
+                "fechaInscripcionRPC": "2016-11-23T03:00:00.000Z",
                 "estado": "1",
                 "etapaLiquidacion": null,
                 "tipoRentaId": "3",
-                "monedaId": "1",
+                "monedaId": "2",
                 "regionId": "1",
-                "durationId": "5",
-                "benchmarkId": "11",
+                "durationId": "3",
+                "benchmarkId": "0",
                 "mmIndice": false,
                 "mmPuro": false,
                 "valuacion": "M",
-                "ci49": false,
+                "ci49": true,
                 "diasLiquidacion": "2",
                 "indice": false,
                 "horizonteId": "2",
-                "sociedadGerenteId": "8",
-                "sociedadDepositariaId": "62",
-                "inicio": "1994-12-01T00:00:00.000Z",
+                "sociedadGerenteId": "372",
+                "sociedadDepositariaId": "65",
+                "inicio": "2017-10-23T03:00:00.000Z",
                 "tipoFondoId": "1",
                 "tipoDinero": "No Aplica",
                 "tipoRentaMixtaId": null,
@@ -77,20 +77,20 @@
                     "nombre": "Abierto"
                 },
                 "moneda": {
-                    "id": "1",
+                    "id": "2",
                     "createdAt": "2017-07-07T22:00:53.000Z",
                     "updatedAt": "2017-07-07T22:00:53.000Z",
-                    "nombre": "Peso Argentina",
-                    "codigoCafci": "ARS",
-                    "idCNV": "1"
+                    "nombre": "Dolar Estadounidense",
+                    "codigoCafci": "USD",
+                    "idCNV": "2"
                 },
                 "duration": {
-                    "id": "5",
+                    "id": "3",
                     "createdAt": "2017-07-07T22:09:10.000Z",
                     "updatedAt": "2017-07-07T22:09:10.000Z",
-                    "nombre": "Mayor a 3 Años",
-                    "codigoCafci": "DM3",
-                    "orden": "D  "
+                    "nombre": "Menor o Igual a 1 Año",
+                    "codigoCafci": "DmI1",
+                    "orden": "B  "
                 },
                 "tipoRenta": {
                     "id": "3",
@@ -111,67 +111,67 @@
                     "orden": "B  "
                 },
                 "benchmark": {
-                    "id": "11",
+                    "id": "0",
                     "createdAt": "2017-07-07T22:09:10.000Z",
                     "updatedAt": "2017-07-07T22:09:10.000Z",
-                    "nombre": "Otro",
-                    "codigoCafci": "OTRO",
-                    "orden": "Z  "
+                    "nombre": "No Registrado",
+                    "codigoCafci": "NoReg",
+                    "orden": "ZZZ"
                 },
                 "depositaria": {
-                    "id": "62",
+                    "id": "65",
                     "createdAt": "2017-07-07T21:59:22.000Z",
                     "updatedAt": "2017-07-07T21:59:22.000Z",
-                    "calle": "Florida",
-                    "numero": 99,
-                    "piso": "-   ",
-                    "depto": "-   ",
-                    "codigoPostal": "1005",
+                    "calle": "Sarmiento",
+                    "numero": 310,
+                    "piso": "1   ",
+                    "depto": "1   ",
+                    "codigoPostal": "1041",
                     "localidad": "Buenos Aires",
                     "provincia": "Ciudad Autónoma de Buenos Aires",
                     "miembro": false,
                     "miembroDesde": null,
-                    "causaBaja": " ",
-                    "razonSocial": "\u0000",
-                    "cuit": "\u0000          ",
+                    "causaBaja": null,
+                    "razonSocial": "aaa",
+                    "cuit": "43433343434",
                     "presidente": "No Registra",
                     "justiciaFecha": null,
                     "justiciaLegal": null,
-                    "nombre": "ICBC (Arg) S.A.",
-                    "nombreCorto": "ICBC (Arg) S.A.",
+                    "nombre": "Banco de Valores S.A.",
+                    "nombreCorto": "Banco de Valores S.A.",
                     "urlCNV": null,
                     "codigoCafciCalificadora": null,
-                    "codigoCNV": "30305",
+                    "codigoCNV": null,
                     "paisId": "2",
                     "actividadId": "2",
-                    "ivaEntidadId": "1",
-                    "cierreEjercicioEntidadId": "1",
+                    "ivaEntidadId": "2",
+                    "cierreEjercicioEntidadId": "2",
                     "fusionId": null
                 },
                 "gerente": {
-                    "id": "8",
+                    "id": "372",
                     "createdAt": "2017-07-07T21:59:22.000Z",
-                    "updatedAt": "2019-12-17T21:08:04.000Z",
-                    "calle": "Bvd Cecilia Grierson",
-                    "numero": 355,
-                    "piso": "14  ",
-                    "depto": ".   ",
-                    "codigoPostal": ".",
-                    "localidad": "Capital Federal",
-                    "provincia": "Buenos Aires",
+                    "updatedAt": "2020-11-12T20:24:15.000Z",
+                    "calle": "Av. Corrientes",
+                    "numero": 316,
+                    "piso": "3   ",
+                    "depto": "362 ",
+                    "codigoPostal": "C1043AAQ",
+                    "localidad": "C.A.B.A.",
+                    "provincia": "Ciudad Autónoma de Buenos Aires",
                     "miembro": true,
-                    "miembroDesde": "2005-06-07T00:00:00.000Z",
-                    "causaBaja": " .",
-                    "razonSocial": "ICBC Investments Argentina S.A.S.G.F.C.I.",
-                    "cuit": "30585058781",
-                    "presidente": "Marcelo José Otermin",
+                    "miembroDesde": "2011-08-08T00:00:00.000Z",
+                    "causaBaja": null,
+                    "razonSocial": "Balanz S.G.F.C.I.S.A.U.",
+                    "cuit": "33708123469",
+                    "presidente": "Julio C. Merlini",
                     "justiciaFecha": null,
                     "justiciaLegal": null,
-                    "nombre": "ICBC Investments Argentina S.A.S.G.F.C.I.",
-                    "nombreCorto": "ICBC Invest.",
-                    "urlCNV": "http://www.cnv.gov.ar/InfoFinan/fondos/InfoFondos.asp?Lang=0&CodiSoc=70120&DescriSoc=Standard%20Investments%20S.A.%20Sociedad%20Gerente%20de%20Fondos%20Comunes%20de%20%20Inversión&Letra=",
+                    "nombre": "Balanz S.G.F.C.I.S.A.U.",
+                    "nombreCorto": "Balanz",
+                    "urlCNV": "http://www.cnv.gob.ar/InfoFinan/fondos/InfoFondos.asp?Lang=0&CodiSoc=70131&DescriSoc=Balanz%20Sociedad%20Gerente%20de%20Fondos%20Comunes%20de%20Inversion%20S.A.&Letra=",
                     "codigoCafciCalificadora": null,
-                    "codigoCNV": "154",
+                    "codigoCNV": "1848",
                     "paisId": "2",
                     "actividadId": "13",
                     "ivaEntidadId": "2",
@@ -181,96 +181,196 @@
             }
         },
         "info": {
+            "diaria": {
+                "actual": {
+                    "fecha": "11/12/2020",
+                    "patrimonio": "",
+                    "vcpUnitario": "1.000000",
+                    "vcp": "1000.0000",
+                    "patrimonioNetoFondo": ""
+                },
+                "referenceDay": "11/12/2020",
+                "rendimientos": {
+                    "day": {
+                        "fecha": "10/12/2020",
+                        "rendimiento": "0.0000",
+                        "tna": "0.0000"
+                    },
+                    "month": {
+                        "fecha": "30/11/2020",
+                        "rendimiento": "0.0000",
+                        "tna": "0.0000"
+                    },
+                    "oneYear": {
+                        "fecha": "11/12/2019",
+                        "rendimiento": "",
+                        "tna": ""
+                    },
+                    "threeYears": {
+                        "fecha": "11/12/2017",
+                        "rendimiento": "",
+                        "tna": ""
+                    },
+                    "fiveYears": {
+                        "fecha": "11/12/2015",
+                        "rendimiento": "",
+                        "tna": ""
+                    },
+                    "year": {
+                        "fecha": "30/12/2019",
+                        "rendimiento": "",
+                        "tna": ""
+                    },
+                    "yearM1": {
+                        "fecha": "28/12/2018",
+                        "rendimiento": "0.0000",
+                        "tna": "0.0000"
+                    },
+                    "yearM2": {
+                        "fecha": "29/12/2017",
+                        "rendimiento": "",
+                        "tna": ""
+                    },
+                    "yearM3": {
+                        "fecha": "30/12/2016",
+                        "rendimiento": "",
+                        "tna": ""
+                    },
+                    "yearM4": {
+                        "fecha": "31/12/2015",
+                        "rendimiento": "",
+                        "tna": ""
+                    },
+                    "monthYear": {
+                        "fecha": "29/11/2019",
+                        "rendimiento": "",
+                        "tna": ""
+                    }
+                }
+            },
             "mensual": {
                 "honorariosComisiones": {
-                    "minimoInversion": 1,
-                    "honorariosAdministracionGerente": "0.0000",
-                    "honorariosAdministracionDepositaria": "0.0000",
+                    "minimoInversion": 50000000,
+                    "honorariosAdministracionGerente": "0.5000",
+                    "honorariosAdministracionDepositaria": "0.1500",
                     "honorariosExito": "N",
                     "gastosGestion": "0.0000",
                     "comisionIngreso": "0.0000",
                     "comisionRescate": "0.0000",
                     "comisionTransferencia": "0.0000"
+                },
+                "calificacion": {
+                    "calificadora": "Moody's Lat. Am. Calif. Riesgo",
+                    "nota": "A-bf.ar",
+                    "fecha": "01/11/2018"
                 }
             },
             "semanal": {
-                "interfazId": "1253598",
+                "interfazId": "1253821",
                 "fechaDatos": "20/11/2020",
                 "carteras": [{
-                        "nombreActivo": "ON YPF Serie 43",
-                        "share": "2.105"
+                        "nombreActivo": "FCI Quinquela Pesos Clase B",
+                        "share": "0.106"
                     },
                     {
-                        "nombreActivo": "FCI Allaria Ahorro - Clase C",
-                        "share": "0.158"
+                        "nombreActivo": "ON Tecpetrol 2022",
+                        "share": "13.237"
                     },
                     {
-                        "nombreActivo": "Bono Boncer 2021 TC21",
-                        "share": "21.946"
+                        "nombreActivo": "ON Telecom Argentina 2021",
+                        "share": "4.166"
                     },
                     {
-                        "nombreActivo": "ON YPF Energia Elect. Cl1",
-                        "share": "1.283"
+                        "nombreActivo": "ON Pan Amer. Energy LLC",
+                        "share": "2.393"
                     },
                     {
-                        "nombreActivo": "Ishares JP Morgan EM Bond Ucits ETF",
-                        "share": "8.081"
+                        "nombreActivo": "ON Capex S2",
+                        "share": "1.766"
                     },
                     {
-                        "nombreActivo": "Bono CER TX21",
-                        "share": "28.517"
+                        "nombreActivo": "ON Cresud Clase 28",
+                        "share": "1.001"
                     },
                     {
-                        "nombreActivo": "Bono Boncer 2022 TX22",
-                        "share": "28.410"
+                        "nombreActivo": "ON CGC Clase A",
+                        "share": "1.190"
                     },
                     {
-                        "nombreActivo": "Bonos Rep Argentina 2029",
-                        "share": "0.508"
+                        "nombreActivo": "ON Petroqui C Rivadavia C2",
+                        "share": "2.494"
                     },
                     {
-                        "nombreActivo": "Bonos Rep Argentina AE38",
-                        "share": "8.178"
+                        "nombreActivo": "ON San Miguel Serie 3 CC",
+                        "share": "1.498"
                     },
                     {
-                        "nombreActivo": "Cta Cte $ ICBC",
-                        "share": "0.041"
+                        "nombreActivo": "ON Transener Clase 2 REGS",
+                        "share": "2.812"
                     },
                     {
-                        "nombreActivo": "Cta Cte U$S ICBC",
-                        "share": "0.046"
+                        "nombreActivo": "ON MSU S7 B",
+                        "share": "3.034"
                     },
                     {
-                        "nombreActivo": "Cta Cte $ Rem Bco Supervi",
+                        "nombreActivo": "ON Bco Galicia 190726",
+                        "share": "5.799"
+                    },
+                    {
+                        "nombreActivo": "ON Pampa- Clase T",
+                        "share": "7.839"
+                    },
+                    {
+                        "nombreActivo": "ON Arcor Clase 9",
+                        "share": "9.048"
+                    },
+                    {
+                        "nombreActivo": "ON Telecom 2026",
+                        "share": "3.462"
+                    },
+                    {
+                        "nombreActivo": "ON Bco Macro Clase 1 Regs",
+                        "share": "4.034"
+                    },
+                    {
+                        "nombreActivo": "ON Pampa 240127",
+                        "share": "4.654"
+                    },
+                    {
+                        "nombreActivo": "ON Vista Gas y Oil Arg C3",
+                        "share": "2.685"
+                    },
+                    {
+                        "nombreActivo": "ON Genneia Clase 21",
+                        "share": "4.115"
+                    },
+                    {
+                        "nombreActivo": "ON Vista Gas y Oil Arg C2",
+                        "share": "2.235"
+                    },
+                    {
+                        "nombreActivo": "ON Pan Amer. Energy C9",
+                        "share": "1.998"
+                    },
+                    {
+                        "nombreActivo": "ON Transp Gas Sur Cl 2",
+                        "share": "5.965"
+                    },
+                    {
+                        "nombreActivo": "ON Telecom C5",
+                        "share": "1.723"
+                    },
+                    {
+                        "nombreActivo": "Cta Cte $ Bco de Valores",
                         "share": "0.000"
                     },
                     {
-                        "nombreActivo": "Cta Cte U$S Bank Amer NY",
-                        "share": "0.004"
+                        "nombreActivo": "Cta Cte U$S Bco Valores",
+                        "share": "11.944"
                     },
                     {
-                        "nombreActivo": "Fut Rofex DLR112020",
-                        "share": "76.448"
-                    },
-                    {
-                        "nombreActivo": "Fut Reg ARS",
-                        "share": "-76.448"
-                    },
-                    {
-                        "nombreActivo": "Cheque Gar.AVFE 00014",
-                        "share": "0.180"
-                    },
-                    {
-                        "nombreActivo": "Cheque Gar.AVFE 00014",
-                        "share": "0.180"
-                    },
-                    {
-                        "nombreActivo": "Cheque Gar.AVFE 00014",
-                        "share": "0.179"
-                    },
-                    {
-                        "nombreActivo": "Cheque Gar.AVFE 00014",
-                        "share": "0.181"
+                        "nombreActivo": "Cta Cte USC Citibank",
+                        "share": "0.802"
                     }
                 ]
             }

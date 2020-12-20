@@ -16,4 +16,5 @@ class MongoDB(object):
     def insert(self, post):
         # add/append/new single record
         post_id = self._collection.insert_one(post).inserted_id
+        self._connection.close()
         return post_id

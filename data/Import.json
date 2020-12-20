@@ -1,87 +1,1001 @@
 {
     "success": true,
     "data": [{
-            "id": "1",
-            "createdAt": "1990-01-01T00:00:00.000Z",
-            "updatedAt": "1990-01-01T00:00:00.000Z",
-            "nombre": "<Sin Asignar>",
-            "codigoCafci": "SAsig",
-            "orden": "ZZZ",
-            "parametroPorcentual": 0
-        },
-        {
-            "id": "2",
-            "createdAt": "1990-01-01T00:00:00.000Z",
-            "updatedAt": "1990-01-01T00:00:00.000Z",
-            "nombre": "Renta Variable",
-            "codigoCafci": "RV",
-            "orden": "A  ",
-            "parametroPorcentual": 5
-        },
-        {
-            "id": "3",
-            "createdAt": "1990-01-01T00:00:00.000Z",
-            "updatedAt": "1990-01-01T00:00:00.000Z",
-            "nombre": "Renta Fija",
-            "codigoCafci": "RF",
-            "orden": "B  ",
-            "parametroPorcentual": 5
-        },
-        {
-            "id": "4",
-            "createdAt": "1990-01-01T00:00:00.000Z",
-            "updatedAt": "1990-01-01T00:00:00.000Z",
-            "nombre": "Mercado de Dinero",
-            "codigoCafci": "DD",
-            "orden": "G  ",
-            "parametroPorcentual": 0.5
-        },
-        {
-            "id": "5",
-            "createdAt": "1990-01-01T00:00:00.000Z",
-            "updatedAt": "1990-01-01T00:00:00.000Z",
-            "nombre": "Renta Mixta",
-            "codigoCafci": "FM",
-            "orden": "C  ",
-            "parametroPorcentual": 5
-        },
-        {
-            "id": "6",
-            "createdAt": "1990-01-01T00:00:00.000Z",
-            "updatedAt": "1990-01-01T00:00:00.000Z",
-            "nombre": "PyMes",
-            "codigoCafci": "FP",
-            "orden": "D  ",
-            "parametroPorcentual": 5
-        },
-        {
-            "id": "7",
-            "createdAt": "1990-01-01T00:00:00.000Z",
-            "updatedAt": "1990-01-01T00:00:00.000Z",
-            "nombre": "Retorno Total",
-            "codigoCafci": "TR",
-            "orden": "F  ",
-            "parametroPorcentual": 0.5
-        },
-        {
-            "id": "8",
-            "createdAt": "1990-01-01T00:00:00.000Z",
-            "updatedAt": "1990-01-01T00:00:00.000Z",
-            "nombre": "Infraestructura",
-            "codigoCafci": "FI",
-            "orden": "E  ",
-            "parametroPorcentual": 5
-        },
-        {
-            "id": "9",
-            "createdAt": "2019-06-06T10:51:34.000Z",
-            "updatedAt": "2019-06-06T10:51:34.000Z",
-            "nombre": "Fondos Cerrados",
-            "codigoCafci": "F",
-            "orden": "FFF",
-            "parametroPorcentual": 0
+        "FondoId": "696",
+        "dataXML": {
+            "Cabecera": {
+                "FondoNombre": "ST Abierto Pymes",
+                "FechaReporte": "02-08-2019",
+                "SGNombre": "Southern Trust S.G.F.C.I.S.A.",
+                "SDNombre": "Banco de Valores S.A.",
+                "Clasificacion": "Renta Mixta",
+                "Moneda": "Peso Argentina",
+                "Region": "Argentina",
+                "Horizonte": "Mediano Plazo"
+            },
+            "Detalle": {
+                "Grupo": [{
+                        "GrupoId": 1,
+                        "GrupoNombre": "Derivados y Opciones",
+                        "GrupoValor": "0.00",
+                        "Renglones": {
+                            "Renglon": [{
+                                    "RenglonId": 1,
+                                    "RenglonNombre": "Fut Rofex DLR082019",
+                                    "RenglonValor": "27.50"
+                                },
+                                {
+                                    "RenglonId": 2,
+                                    "RenglonNombre": "Fut Rofex DLR082019",
+                                    "RenglonValor": "-27.50"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "GrupoId": 2,
+                        "GrupoNombre": "Disponibilidades",
+                        "GrupoValor": "0.24",
+                        "Renglones": {
+                            "Renglon": [{
+                                    "RenglonId": 1,
+                                    "RenglonNombre": "Cta Cte $ Bco de Valores",
+                                    "RenglonValor": "-0.01"
+                                },
+                                {
+                                    "RenglonId": 2,
+                                    "RenglonNombre": "Cta Cte $ Bco de Valores",
+                                    "RenglonValor": "0.00"
+                                },
+                                {
+                                    "RenglonId": 3,
+                                    "RenglonNombre": "Cta Cte $ Bco de Valores",
+                                    "RenglonValor": "0.25"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "GrupoId": 3,
+                        "GrupoNombre": "Operaciones a Plazo en Peso Argentina",
+                        "GrupoValor": "2.79",
+                        "Renglones": {
+                            "Renglon": [{
+                                "RenglonId": 1,
+                                "RenglonNombre": "Pzo Fi UVA $ Bco Nacion",
+                                "RenglonValor": "2.79"
+                            }]
+                        }
+                    },
+                    {
+                        "GrupoId": 4,
+                        "GrupoNombre": "Titulos de Deuda en Peso Argentina",
+                        "GrupoValor": "21.32",
+                        "Renglones": {
+                            "Renglon": [{
+                                    "RenglonId": 1,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00083",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 2,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00191",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 3,
+                                    "RenglonNombre": "Cheque Gar.INGA 00150",
+                                    "RenglonValor": "0.12",
+                                    "RenglonOrganizadora": "Intergarantias S.G.R."
+                                },
+                                {
+                                    "RenglonId": 4,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00191",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 5,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00191",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 6,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00191",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 7,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00094",
+                                    "RenglonValor": "0.14",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 8,
+                                    "RenglonNombre": "Cheque Gar.ACPY 00017",
+                                    "RenglonValor": "0.12",
+                                    "RenglonOrganizadora": "Acindar Pymes S.G.R."
+                                },
+                                {
+                                    "RenglonId": 9,
+                                    "RenglonNombre": "Cheque Gar.ACPY 00017",
+                                    "RenglonValor": "0.12",
+                                    "RenglonOrganizadora": "Acindar Pymes S.G.R."
+                                },
+                                {
+                                    "RenglonId": 10,
+                                    "RenglonNombre": "Bono Boncer 2020 TC20",
+                                    "RenglonValor": "4.62"
+                                },
+                                {
+                                    "RenglonId": 11,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00083",
+                                    "RenglonValor": "0.02",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 12,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00083",
+                                    "RenglonValor": "0.02",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 13,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00083",
+                                    "RenglonValor": "0.02",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 14,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00191",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 15,
+                                    "RenglonNombre": "ON Bco Ciudad C21",
+                                    "RenglonValor": "0.45"
+                                },
+                                {
+                                    "RenglonId": 16,
+                                    "RenglonNombre": "Letra Prov Bs As BBF20",
+                                    "RenglonValor": "3.50"
+                                },
+                                {
+                                    "RenglonId": 17,
+                                    "RenglonNombre": "Lecaps S13S9",
+                                    "RenglonValor": "0.94"
+                                },
+                                {
+                                    "RenglonId": 18,
+                                    "RenglonNombre": "Lecaps S30G9",
+                                    "RenglonValor": "6.60"
+                                },
+                                {
+                                    "RenglonId": 19,
+                                    "RenglonNombre": "Lecer X30G9",
+                                    "RenglonValor": "0.53"
+                                },
+                                {
+                                    "RenglonId": 20,
+                                    "RenglonNombre": "ON Gar Induar S1",
+                                    "RenglonValor": "0.01"
+                                },
+                                {
+                                    "RenglonId": 21,
+                                    "RenglonNombre": "Cheque Gar.PYVL 00007",
+                                    "RenglonValor": "0.02",
+                                    "RenglonOrganizadora": "Pyme Aval S.G.R"
+                                },
+                                {
+                                    "RenglonId": 22,
+                                    "RenglonNombre": "Cheque Gar.PYVL 00007",
+                                    "RenglonValor": "0.02",
+                                    "RenglonOrganizadora": "Pyme Aval S.G.R"
+                                },
+                                {
+                                    "RenglonId": 23,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00015",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 24,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00015",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 25,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00015",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 26,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00015",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 27,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00007",
+                                    "RenglonValor": "0.04",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 28,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00027",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 29,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00027",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 30,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00015",
+                                    "RenglonValor": "0.03",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 31,
+                                    "RenglonNombre": "Cheque Gar.INPY 00191",
+                                    "RenglonValor": "0.04",
+                                    "RenglonOrganizadora": "Integra Pymes S.G.R."
+                                },
+                                {
+                                    "RenglonId": 32,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00299",
+                                    "RenglonValor": "0.10",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 33,
+                                    "RenglonNombre": "Cheque Gar.BLDA 00330",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "BLD Avales S.G.R."
+                                },
+                                {
+                                    "RenglonId": 34,
+                                    "RenglonNombre": "Cheque Gar.BLDA 00330",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "BLD Avales S.G.R."
+                                },
+                                {
+                                    "RenglonId": 35,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00027",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 36,
+                                    "RenglonNombre": "Cheque Gar.ACEN 00011",
+                                    "RenglonValor": "0.06",
+                                    "RenglonOrganizadora": "Avales del Centro S.G.R."
+                                },
+                                {
+                                    "RenglonId": 37,
+                                    "RenglonNombre": "Cheque Gar.ACEN 00011",
+                                    "RenglonValor": "0.05",
+                                    "RenglonOrganizadora": "Avales del Centro S.G.R."
+                                },
+                                {
+                                    "RenglonId": 38,
+                                    "RenglonNombre": "Cheque Gar.ACEN 00011",
+                                    "RenglonValor": "0.06",
+                                    "RenglonOrganizadora": "Avales del Centro S.G.R."
+                                },
+                                {
+                                    "RenglonId": 39,
+                                    "RenglonNombre": "Cheque Gar.ACEN 00011",
+                                    "RenglonValor": "0.06",
+                                    "RenglonOrganizadora": "Avales del Centro S.G.R."
+                                },
+                                {
+                                    "RenglonId": 40,
+                                    "RenglonNombre": "Cheque Gar.ACEN 00285",
+                                    "RenglonValor": "0.02",
+                                    "RenglonOrganizadora": "Avales del Centro S.G.R."
+                                },
+                                {
+                                    "RenglonId": 41,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00015",
+                                    "RenglonValor": "0.03",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 42,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00015",
+                                    "RenglonValor": "0.03",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 43,
+                                    "RenglonNombre": "Cheque Gar.BLDA 00330",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "BLD Avales S.G.R."
+                                },
+                                {
+                                    "RenglonId": 44,
+                                    "RenglonNombre": "Cheque Gar.BLDA 00330",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "BLD Avales S.G.R."
+                                },
+                                {
+                                    "RenglonId": 45,
+                                    "RenglonNombre": "Cheque Gar.BLDA 00330",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "BLD Avales S.G.R."
+                                },
+                                {
+                                    "RenglonId": 46,
+                                    "RenglonNombre": "Cheque Gar.BLDA 00330",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "BLD Avales S.G.R."
+                                },
+                                {
+                                    "RenglonId": 47,
+                                    "RenglonNombre": "Cheque Gar.BLDA 00330",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "BLD Avales S.G.R."
+                                },
+                                {
+                                    "RenglonId": 48,
+                                    "RenglonNombre": "Cheque Gar.BLDA 00330",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "BLD Avales S.G.R."
+                                },
+                                {
+                                    "RenglonId": 49,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00007",
+                                    "RenglonValor": "0.04",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 50,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00029",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 51,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00029",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 52,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00029",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 53,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00029",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 54,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00029",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 55,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00191",
+                                    "RenglonValor": "0.03",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 56,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00285",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 57,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00097",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 58,
+                                    "RenglonNombre": "Cheque Gar.VINC 00020",
+                                    "RenglonValor": "0.05",
+                                    "RenglonOrganizadora": "Vinculos S.G.R."
+                                },
+                                {
+                                    "RenglonId": 59,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00007",
+                                    "RenglonValor": "0.04",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 60,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00007",
+                                    "RenglonValor": "0.04",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 61,
+                                    "RenglonNombre": "Cheque Gar.UNIO 00027",
+                                    "RenglonValor": "0.06",
+                                    "RenglonOrganizadora": "Union S.G.R."
+                                },
+                                {
+                                    "RenglonId": 62,
+                                    "RenglonNombre": "Cheque Gar.UNIO 00027",
+                                    "RenglonValor": "0.06",
+                                    "RenglonOrganizadora": "Union S.G.R."
+                                },
+                                {
+                                    "RenglonId": 63,
+                                    "RenglonNombre": "Cheque Gar.VINC 00020",
+                                    "RenglonValor": "0.11",
+                                    "RenglonOrganizadora": "Vinculos S.G.R."
+                                },
+                                {
+                                    "RenglonId": 64,
+                                    "RenglonNombre": "Cheque Gar.VINC 00020",
+                                    "RenglonValor": "0.04",
+                                    "RenglonOrganizadora": "Vinculos S.G.R."
+                                },
+                                {
+                                    "RenglonId": 65,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00285",
+                                    "RenglonValor": "0.03",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 66,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00285",
+                                    "RenglonValor": "0.04",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 67,
+                                    "RenglonNombre": "Cheque Gar.VINC 00020",
+                                    "RenglonValor": "0.04",
+                                    "RenglonOrganizadora": "Vinculos S.G.R."
+                                },
+                                {
+                                    "RenglonId": 68,
+                                    "RenglonNombre": "Cheque Gar.VINC 00020",
+                                    "RenglonValor": "0.05",
+                                    "RenglonOrganizadora": "Vinculos S.G.R."
+                                },
+                                {
+                                    "RenglonId": 69,
+                                    "RenglonNombre": "Cheque Gar.VINC 00020",
+                                    "RenglonValor": "0.05",
+                                    "RenglonOrganizadora": "Vinculos S.G.R."
+                                },
+                                {
+                                    "RenglonId": 70,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00285",
+                                    "RenglonValor": "0.04",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 71,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00315",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 72,
+                                    "RenglonNombre": "Cheque Gar.VINC 00020",
+                                    "RenglonValor": "0.04",
+                                    "RenglonOrganizadora": "Vinculos S.G.R."
+                                },
+                                {
+                                    "RenglonId": 73,
+                                    "RenglonNombre": "Cheque Gar.VINC 00020",
+                                    "RenglonValor": "0.05",
+                                    "RenglonOrganizadora": "Vinculos S.G.R."
+                                },
+                                {
+                                    "RenglonId": 74,
+                                    "RenglonNombre": "Cheque Gar.PYVL 00285",
+                                    "RenglonValor": "0.06",
+                                    "RenglonOrganizadora": "Pyme Aval S.G.R"
+                                },
+                                {
+                                    "RenglonId": 75,
+                                    "RenglonNombre": "Cheque Gar.BLDA 00011",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "BLD Avales S.G.R."
+                                },
+                                {
+                                    "RenglonId": 76,
+                                    "RenglonNombre": "Cheque Gar.BLDA 00191",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "BLD Avales S.G.R."
+                                },
+                                {
+                                    "RenglonId": 77,
+                                    "RenglonNombre": "Cheque Gar.UNIO 00027",
+                                    "RenglonValor": "0.03",
+                                    "RenglonOrganizadora": "Union S.G.R."
+                                },
+                                {
+                                    "RenglonId": 78,
+                                    "RenglonNombre": "Cheque Gar.INGA 00027",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Intergarantias S.G.R."
+                                },
+                                {
+                                    "RenglonId": 79,
+                                    "RenglonNombre": "Cheque Gar.INGA 00029",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Intergarantias S.G.R."
+                                },
+                                {
+                                    "RenglonId": 80,
+                                    "RenglonNombre": "Cheque Gar.INGA 00027",
+                                    "RenglonValor": "0.02",
+                                    "RenglonOrganizadora": "Intergarantias S.G.R."
+                                },
+                                {
+                                    "RenglonId": 81,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00007",
+                                    "RenglonValor": "0.09",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 82,
+                                    "RenglonNombre": "Cheque Gar.INGA 00017",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Intergarantias S.G.R."
+                                },
+                                {
+                                    "RenglonId": 83,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00014",
+                                    "RenglonValor": "0.07",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 84,
+                                    "RenglonNombre": "Cheque Gar.FEDE 00072",
+                                    "RenglonValor": "0.02",
+                                    "RenglonOrganizadora": "Aval Federal S.G.R"
+                                },
+                                {
+                                    "RenglonId": 85,
+                                    "RenglonNombre": "Cheque Gar.INGA 00017",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Intergarantias S.G.R."
+                                },
+                                {
+                                    "RenglonId": 86,
+                                    "RenglonNombre": "Cheque Gar.INGA 00017",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Intergarantias S.G.R."
+                                },
+                                {
+                                    "RenglonId": 87,
+                                    "RenglonNombre": "Cheque Gar.INPY 00011",
+                                    "RenglonValor": "0.03",
+                                    "RenglonOrganizadora": "Integra Pymes S.G.R."
+                                },
+                                {
+                                    "RenglonId": 88,
+                                    "RenglonNombre": "Cheque Gar.INPY 00011",
+                                    "RenglonValor": "0.03",
+                                    "RenglonOrganizadora": "Integra Pymes S.G.R."
+                                },
+                                {
+                                    "RenglonId": 89,
+                                    "RenglonNombre": "Cheque Gar.INPY 00072",
+                                    "RenglonValor": "0.02",
+                                    "RenglonOrganizadora": "Integra Pymes S.G.R."
+                                },
+                                {
+                                    "RenglonId": 90,
+                                    "RenglonNombre": "Cheque Gar.VINC 00072",
+                                    "RenglonValor": "0.03",
+                                    "RenglonOrganizadora": "Vinculos S.G.R."
+                                },
+                                {
+                                    "RenglonId": 91,
+                                    "RenglonNombre": "Cheque Gar.CUAV 00027",
+                                    "RenglonValor": "0.05",
+                                    "RenglonOrganizadora": "Cuyo Aval S.G.R."
+                                },
+                                {
+                                    "RenglonId": 92,
+                                    "RenglonNombre": "Cheque Gar.CUAV 00027",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Cuyo Aval S.G.R."
+                                },
+                                {
+                                    "RenglonId": 93,
+                                    "RenglonNombre": "Cheque Gar.CONE 00072",
+                                    "RenglonValor": "0.03",
+                                    "RenglonOrganizadora": "Confederar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 94,
+                                    "RenglonNombre": "Cheque Gar.CONE 00017",
+                                    "RenglonValor": "0.03",
+                                    "RenglonOrganizadora": "Confederar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 95,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00007",
+                                    "RenglonValor": "0.19",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 96,
+                                    "RenglonNombre": "Cheque Gar.VINC 00034",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Vinculos S.G.R."
+                                },
+                                {
+                                    "RenglonId": 97,
+                                    "RenglonNombre": "Cheque Gar.VINC 00034",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Vinculos S.G.R."
+                                },
+                                {
+                                    "RenglonId": 98,
+                                    "RenglonNombre": "Cheque Gar.VINC 00299",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Vinculos S.G.R."
+                                },
+                                {
+                                    "RenglonId": 99,
+                                    "RenglonNombre": "Cheque Gar.CONE 00017",
+                                    "RenglonValor": "0.03",
+                                    "RenglonOrganizadora": "Confederar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 100,
+                                    "RenglonNombre": "Cheque Gar.CONE 00017",
+                                    "RenglonValor": "0.03",
+                                    "RenglonOrganizadora": "Confederar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 101,
+                                    "RenglonNombre": "Cheque Gar.CUAV 00027",
+                                    "RenglonValor": "0.00",
+                                    "RenglonOrganizadora": "Cuyo Aval S.G.R."
+                                },
+                                {
+                                    "RenglonId": 102,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00007",
+                                    "RenglonValor": "0.09",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 103,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00007",
+                                    "RenglonValor": "0.19",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 104,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00191",
+                                    "RenglonValor": "0.37",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 105,
+                                    "RenglonNombre": "Cheque Gar.ACEN 00285",
+                                    "RenglonValor": "0.20",
+                                    "RenglonOrganizadora": "Avales del Centro S.G.R."
+                                },
+                                {
+                                    "RenglonId": 106,
+                                    "RenglonNombre": "Cheque Gar.ACEN 00020",
+                                    "RenglonValor": "0.13",
+                                    "RenglonOrganizadora": "Avales del Centro S.G.R."
+                                },
+                                {
+                                    "RenglonId": 107,
+                                    "RenglonNombre": "Cheque Gar.GANA 00191",
+                                    "RenglonValor": "0.03",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 108,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00191",
+                                    "RenglonValor": "0.02",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 109,
+                                    "RenglonNombre": "Cheque Gar.ACEN 00020",
+                                    "RenglonValor": "0.06",
+                                    "RenglonOrganizadora": "Avales del Centro S.G.R."
+                                },
+                                {
+                                    "RenglonId": 110,
+                                    "RenglonNombre": "Cheque Gar.GANA 00011",
+                                    "RenglonValor": "0.05",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 111,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00191",
+                                    "RenglonValor": "0.02",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 112,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00191",
+                                    "RenglonValor": "0.02",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 113,
+                                    "RenglonNombre": "Cheque Gar.GANA 00191",
+                                    "RenglonValor": "0.03",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 114,
+                                    "RenglonNombre": "Cheque Gar.GANA 00191",
+                                    "RenglonValor": "0.03",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 115,
+                                    "RenglonNombre": "Cheque Gar.GANA 00191",
+                                    "RenglonValor": "0.03",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 116,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00191",
+                                    "RenglonValor": "0.02",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 117,
+                                    "RenglonNombre": "Cheque Gar.GANA 00034",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 118,
+                                    "RenglonNombre": "Cheque Gar.GANA 00034",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 119,
+                                    "RenglonNombre": "Cheque Gar.GANA 00034",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 120,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00191",
+                                    "RenglonValor": "0.02",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 121,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00097",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 122,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00097",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 123,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00097",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 124,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00097",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 125,
+                                    "RenglonNombre": "Cheque Gar.AFIA 00097",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Afianzar S.G.R."
+                                },
+                                {
+                                    "RenglonId": 126,
+                                    "RenglonNombre": "Cheque Gar.GANA 00034",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 127,
+                                    "RenglonNombre": "Cheque Gar.GANA 00034",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 128,
+                                    "RenglonNombre": "Cheque Gar.GANA 00034",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 129,
+                                    "RenglonNombre": "Cheque Gar.GANA 00034",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 130,
+                                    "RenglonNombre": "Cheque Gar.GANA 00034",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 131,
+                                    "RenglonNombre": "Cheque Gar.GANA 00285",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 132,
+                                    "RenglonNombre": "Cheque Gar.GANA 00093",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 133,
+                                    "RenglonNombre": "Cheque Gar.GANA 00034",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 134,
+                                    "RenglonNombre": "Cheque Gar.GANA 00034",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 135,
+                                    "RenglonNombre": "Cheque Gar.GANA 00034",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 136,
+                                    "RenglonNombre": "Cheque Gar.GANA 00011",
+                                    "RenglonValor": "0.00",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 137,
+                                    "RenglonNombre": "Cheque Gar.GANA 00011",
+                                    "RenglonValor": "0.00",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 138,
+                                    "RenglonNombre": "Cheque Gar.GANA 00011",
+                                    "RenglonValor": "0.00",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 139,
+                                    "RenglonNombre": "Cheque Gar.GANA 00011",
+                                    "RenglonValor": "0.00",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 140,
+                                    "RenglonNombre": "Cheque Gar.GANA 00285",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 141,
+                                    "RenglonNombre": "Cheque Gar.GANA 00285",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 142,
+                                    "RenglonNombre": "Cheque Gar.GANA 00285",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 143,
+                                    "RenglonNombre": "Cheque Gar.GANA 00285",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 144,
+                                    "RenglonNombre": "Cheque Gar.GANA 00093",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 145,
+                                    "RenglonNombre": "Cheque Gar.GANA 00093",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 146,
+                                    "RenglonNombre": "Cheque Gar.GANA 00093",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 147,
+                                    "RenglonNombre": "Cheque Gar.GANA 00011",
+                                    "RenglonValor": "0.00",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 148,
+                                    "RenglonNombre": "Cheque Gar.GANA 00011",
+                                    "RenglonValor": "0.00",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 149,
+                                    "RenglonNombre": "Cheque Gar.GANA 00093",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                },
+                                {
+                                    "RenglonId": 150,
+                                    "RenglonNombre": "Cheque Gar.GANA 00093",
+                                    "RenglonValor": "0.01",
+                                    "RenglonOrganizadora": "Aval Ganadero S.G.R"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "GrupoId": 5,
+                        "GrupoNombre": "Vehiculos Inversion Colectiva Argentina",
+                        "GrupoValor": "1.51",
+                        "Renglones": {
+                            "Renglon": [{
+                                "RenglonId": 1,
+                                "RenglonNombre": "FCI MAF Money Market",
+                                "RenglonValor": "1.51"
+                            }]
+                        }
+                    },
+                    {
+                        "GrupoId": 6,
+                        "GrupoNombre": "Otros Activos",
+                        "GrupoValor": "74.12"
+                    },
+                    {
+                        "GrupoId": 8,
+                        "GrupoNombre": "Pasivos",
+                        "GrupoValor": "-0.08"
+                    }
+                ]
+            },
+            "Pie": {
+                "PieNombre": "Patrimonio Neto (Peso Argentina)",
+                "PieValor": "447,543,455.80"
+            }
         }
-    ],
-    "page": 0,
-    "lastPage": 0
+    }]
 }

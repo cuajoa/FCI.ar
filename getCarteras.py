@@ -29,6 +29,8 @@ counter = counter + 1
 #print(counter)
 
 # Comienzo a recolectar la info
+mongo_db = MongoDB(database_name='fciar', collection_name='patrimonio')
+
 while True:
     url = 'https://api.cafci.org.ar/interfaz/semanal/resumen/cartera/'+str(counter)
     response = requests.get(url)
@@ -40,7 +42,6 @@ while True:
     if response.status_code != 200:
         print('Failed to get data:', response.status_code)
     else:
-        mongo_db = MongoDB(database_name='fciar', collection_name='patrimonio')
 
         data_converted=data['data'][0]["dataXML"]
 
@@ -48,8 +49,24 @@ while True:
         fecha=datetime.strptime(data_converted["Cabecera"]["FechaReporte"], '%d-%m-%Y').strftime('%m-%d-%Y')
         patrimonio=data_converted["Pie"]["PieValor"].replace(',','')
 
-        #print(fecha)
-        posted_id = mongo_db.insert({"_id":counter, "data":cabecera, "fecha":datetime.strptime(fecha,'%m-%d-%Y'), "patrimonio":Decimal(patrimonio)})
+        #Incluir booleano EsEsco
+        #array con todas las SG de ESCO y chequear si existe o no
+        not_esco=["Tutelar Inversora S.A.",
+        "BBVA Asset Management Argentina S.A.G.F.C.I.",
+        "HSBC Global Asset Management Argentina S.A.S.G.F.C.I.",
+        "Bull Market Asset Management S.A.",
+        "C y C Administradora de Fondos S.A.",
+        "Mercofond S.G.F.C.I.S.A.",
+        "Bayfe S.A.S.G.F.C.I.",
+        "Nativa S.G.F.C.I.S.A."]
+
+        esEsco=True
+
+        if cabecera["SGNombre"] in not_esco:
+            esEsco=False
+        
+        print(esEsco)
+        posted_id = mongo_db.insert({"_id":counter, "data":cabecera, "fecha":datetime.strptime(fecha,'%m-%d-%Y'), "patrimonio":Decimal(patrimonio), "esESCO":esEsco})
 
     counter = counter + 1
     print(counter)

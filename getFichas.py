@@ -14,6 +14,8 @@ db = mongo_db.fciar
 db_clases = db.clases
 
 print("start @ " + str(datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
+mongo_db_insert = MongoDB(collection_name='rendimientos')
+
 for item in db_clases.find():
     fondo_id=item["fondo_id"]
     clase_id=item["clase_id"]
@@ -27,7 +29,6 @@ for item in db_clases.find():
         print('Failed to get data:', response.status_code)
     else:
         data_converted=data['data']
-        mongo_db_insert = MongoDB(collection_name='rendimientos')
 
         print(fondo_id + "_" + clase_id)
 
@@ -82,7 +83,6 @@ for item in db_clases.find():
 
                 print(_id)
                 response.close()
-        
 
 mongo_db.close()
 print("end @ " + str(datetime.now().strftime("%Y-%m-%d %H:%M:%S")))

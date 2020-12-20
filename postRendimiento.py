@@ -3,22 +3,11 @@
 from common.postTwitter import PostTwitter
 from pymongo import MongoClient
 from datetime import datetime, timedelta
+from common.general import general
 
 mongo_db = MongoClient()
 db = mongo_db.fciar
 db_rendimientos = db.rendimientos
-
-def getFechaDesde(fecha):
-    #Por defecto es -2, si es lunes hago -4
-    day_Diff=2
-    if datetime.today().weekday() == 6:
-        day_Diff=3
-    if datetime.today().weekday() == 0:
-        day_Diff=4
-
-    fecha_desde=fecha.today()- timedelta(days=day_Diff)
-
-    return fecha_desde
 
 def getMessageToPost(item):
     diario= item["rendimientos"]["day"]
@@ -31,7 +20,7 @@ def getTop3(tipo_rentaParam):
     #Obtengo el top 3 de los fondos Mercado de Dinero id=3
     fecha_hasta=datetime.today()- timedelta(days=1)
 
-    fecha_desde=getFechaDesde(fecha_hasta)
+    fecha_desde=general.getFechaDesde(fecha_hasta)
     curs = db_rendimientos.find({"moneda":"ARS", "tipo_renta.id":tipo_rentaParam, "fecha":{"$gte" : fecha_desde, "$lt": fecha_hasta } }).sort([("rendimientos.day.rendimiento", -1)]).limit(15)
 
     fecha_publish=str(curs[0]["fecha"].strftime("%d/%m/%Y"))
@@ -58,7 +47,7 @@ def getTop3(tipo_rentaParam):
 def getFCIBilleteras():
     fecha_hasta=datetime.today()- timedelta(days=1)
 
-    fecha_desde=getFechaDesde(fecha_hasta)
+    fecha_desde=general.getFechaDesde(fecha_hasta)
     curs = db_rendimientos.find({"fondo_id":{"$in":["798", "443"]}, "fecha":{"$gte" : fecha_desde, "$lt": fecha_hasta } }).sort([("rendimientos.day.rendimiento", -1)]).limit(15)
 
     fecha_publish=str(curs[0]["fecha"].strftime("%d/%m/%Y"))
