@@ -1,6 +1,6 @@
 # *-* coding: utf-8 *-*
 # Postea fondos que rinde mas que un PF
-# {"info.diaria.rendimientos.month.tna": {$gte:"37"}, "model.fondo.tipoRentaId":{ $in:["3","4"] }}
+# {"rendimientos.day.tna": { $gte:"37"}, "tipo_renta.id":{ $in:["3","4"] }}
 
 from common.general import general
 from common.postTwitter import PostTwitter

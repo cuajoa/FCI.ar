@@ -12,7 +12,7 @@ db_rendimientos = db.rendimientos
 def getMessageToPost(item):
     diario= item["rendimientos"]["day"]
     mensual= item["rendimientos"]["month"]
-    message= item["nombre"] + "\nDiario: " + str(diario["rendimiento"]) + "% | Mes: " +mensual["rendimiento"] + "% | TNA: "+ mensual["tna"] + "\n"
+    message= str(item["nombre"]).replace("Infraestructura", "") + "\nDiario: " + str(diario["rendimiento"]) + "% | Mes: " +mensual["rendimiento"] + "% | TNA: "+ mensual["tna"] + "\n"
     
     return message
 
@@ -77,8 +77,14 @@ tweet_id=tw.post(message_post_Wallet,None).id
 #For por cada id de tipo de renta
 for i in ["2","3","4","5","6","7","8"]:
     message_post = getTop3(i)
+    try:
+        tweet_id=tw.post(message_post,tweet_id).id
+    except:
+        print("An exception occurred")
 
-    tweet_id=tw.post(message_post,tweet_id).id
+message_at="@Santander_Ar @MarivaFondos @allarialedesma @bullmarketbrok @Inverti_enBolsa @BINDInversiones @BalanzCapital @argenfunds @CohenArgentina @Inverti_enBolsa"
+
+tweet_id=tw.post(message_at,tweet_id).id
 
 #@Santander_Ar
 #@MarivaFondos
@@ -86,3 +92,7 @@ for i in ["2","3","4","5","6","7","8"]:
 #@bullmarketbrok
 #@Inverti_enBolsa
 #@BINDInversiones
+#@BalanzCapital
+#@argenfunds
+#@CohenArgentina
+#@Inverti_enBolsa

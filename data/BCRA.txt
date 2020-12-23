@@ -1,0 +1,8 @@
+Token
+
+eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDAwMDgwMDEsInR5cGUiOiJleHRlcm5hbCIsInVzZXIiOiJjdWFqb2FAZ21haWwuY29tIn0.-oY3NidWjLf4XNbeh1wwp-AQAjGlmqVvtreelxAU7b3jms91MGUdqALQ1xCDlhgCYpa0cf-DSKB8ReOJaCPC-g
+
+Authorization: BEARER eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NDAwMDgwMDEsInR5cGUiOiJleHRlcm5hbCIsInVzZXIiOiJjdWFqb2FAZ21haWwuY29tIn0.-oY3NidWjLf4XNbeh1wwp-AQAjGlmqVvtreelxAU7b3jms91MGUdqALQ1xCDlhgCYpa0cf-DSKB8ReOJaCPC-g
+
+https://api.estadisticasbcra.com/usd
+https://api.estadisticasbcra.com/usd_of
