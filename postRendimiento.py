@@ -47,7 +47,10 @@ def getTop3(tipo_rentaParam):
 def getFCIBilleteras():
     fecha_hasta=datetime.today()- timedelta(days=1)
 
+    print(fecha_hasta)
+
     fecha_desde=general.getFechaDesde(fecha_hasta)
+    print(fecha_desde)
     curs = db_rendimientos.find({"fondo_id":{"$in":["798", "443"]}, "fecha":{"$gte" : fecha_desde, "$lt": fecha_hasta } }).sort([("rendimientos.day.rendimiento", -1)]).limit(15)
 
     fecha_publish=str(curs[0]["fecha"].strftime("%d/%m/%Y"))
