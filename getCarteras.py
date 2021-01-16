@@ -17,7 +17,7 @@ from common.connection import MongoDB
 counter=1250332
 
 #Obtengo el último ID
-mongo_db = MongoClient()
+mongo_db = MongoClient(host='192.168.22.70', port=27017)
 db = mongo_db.fciar
 collection = db.patrimonio
 
@@ -65,7 +65,7 @@ while True:
         if cabecera["SGNombre"] in not_esco:
             esEsco=False
         
-        print(esEsco)
+        #print(esEsco)
         posted_id = mongo_db.insert({"_id":counter, "data":cabecera, "fecha":datetime.strptime(fecha,'%m-%d-%Y'), "patrimonio":Decimal(patrimonio), "esESCO":esEsco})
 
     counter = counter + 1

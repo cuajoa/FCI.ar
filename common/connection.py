@@ -3,7 +3,7 @@ from pymongo import MongoClient
 class MongoDB(object):
     def __init__(self, database_name='fciar', collection_name=None):
         try:
-            self._connection = MongoClient(host='localhost', port=27017, maxPoolSize=200)
+            self._connection = MongoClient(host='192.168.22.70', port=27017, maxPoolSize=200)
         except Exception as error:
             raise Exception(error)
         self._database = None

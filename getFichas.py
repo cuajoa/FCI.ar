@@ -9,7 +9,7 @@ from datetime import datetime
 from common.connection import MongoDB
 
 # Consulto los fondos para traer la ficha
-mongo_db = MongoClient()
+mongo_db = MongoClient(host='192.168.22.70', port=27017)
 db = mongo_db.fciar
 db_clases = db.clases
 
