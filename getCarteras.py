@@ -9,7 +9,6 @@
 #Se conecta
 
 import requests
-from pymongo import MongoClient
 from bson import Decimal128 as Decimal
 from datetime import datetime
 from common.connection import MongoDB
@@ -17,9 +16,9 @@ from common.connection import MongoDB
 counter=1250332
 
 #Obtengo el último ID
-mongo_db = MongoClient(host='192.168.22.70', port=27017)
-db = mongo_db.fciar
-collection = db.patrimonio
+# mongo_db = MongoClient(host='192.168.22.70', port=27017)
+# db = mongo_db.fciar
+collection =MongoDB.getCollection(collection_name='patrimonio')
 
 curs = collection.find().limit(1).sort([("_id", -1)])
 for item in curs:
@@ -29,7 +28,7 @@ counter = counter + 1
 #print(counter)
 
 # Comienzo a recolectar la info
-mongo_db = MongoDB(database_name='fciar', collection_name='patrimonio')
+mongo_db = MongoDB(collection_name='patrimonio')
 
 while True:
     url = 'https://api.cafci.org.ar/interfaz/semanal/resumen/cartera/'+str(counter)

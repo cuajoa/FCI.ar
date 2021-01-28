@@ -4,14 +4,13 @@
 
 import requests
 from bson import Decimal128 as Decimal
-from pymongo import MongoClient
 from datetime import datetime
 from common.connection import MongoDB
 
 # Consulto los fondos para traer la ficha
-mongo_db = MongoClient(host='192.168.22.70', port=27017)
-db = mongo_db.fciar
-db_clases = db.clases
+# mongo_db = MongoClient(host='192.168.22.70', port=27017)
+# db = mongo_db.fciar
+db_clases = MongoDB.getCollection(collection_name='clases')
 
 print("start @ " + str(datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
 mongo_db_insert = MongoDB(collection_name='rendimientos')
@@ -54,7 +53,7 @@ for item in db_clases.find():
             fecha=datetime.strptime(fecha_data, '%d/%m/%Y')
             _id=fecha.strftime('%Y%m%d')+"_"+fondo_id + "_" +clase_id
             
-            db_rendimientos = db.rendimientos
+            db_rendimientos = MongoDB.getCollection(collection_name='rendimientos')
             #Chequeo si ya existe, si no existe lo inserto
             if db_rendimientos.count_documents({'_id': _id}, limit=1) == 0:
                 moneda=data_converted["model"]["fondo"]["moneda"]["codigoCafci"]
@@ -84,5 +83,4 @@ for item in db_clases.find():
                 print(_id)
                 response.close()
 
-mongo_db.close()
 print("end @ " + str(datetime.now().strftime("%Y-%m-%d %H:%M:%S")))

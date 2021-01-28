@@ -1,13 +1,11 @@
 # *-* coding: utf-8 *-*
 # Consulta fondos que más rindieron
 from common.postTwitter import PostTwitter
-from pymongo import MongoClient
 from datetime import datetime, timedelta
 from common.general import general
+from common.connection import MongoDB
 
-mongo_db = MongoClient()
-db = mongo_db.fciar
-db_rendimientos = db.rendimientos
+db_rendimientos = MongoDB.getCollection(collection_name='rendimientos')
 
 def getMessageToPost(item):
     diario= item["rendimientos"]["day"]
