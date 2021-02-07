@@ -63,6 +63,7 @@
                 "excentoTasa": false,
                 "d569": false,
                 "d569FondoId": null,
+                "fechaCierreBalances": "1900-12-31T00:00:00.000Z",
                 "horizonte": {
                     "id": "2",
                     "createdAt": "2017-07-07T22:09:10.000Z",
@@ -121,7 +122,7 @@
                 "depositaria": {
                     "id": "65",
                     "createdAt": "2017-07-07T21:59:22.000Z",
-                    "updatedAt": "2017-07-07T21:59:22.000Z",
+                    "updatedAt": "2021-01-07T21:32:16.000Z",
                     "calle": "Sarmiento",
                     "numero": 310,
                     "piso": "1   ",
@@ -133,7 +134,7 @@
                     "miembroDesde": null,
                     "causaBaja": null,
                     "razonSocial": "aaa",
-                    "cuit": "43433343434",
+                    "cuit": "30-57612427-5",
                     "presidente": "No Registra",
                     "justiciaFecha": null,
                     "justiciaLegal": null,
@@ -183,68 +184,68 @@
         "info": {
             "diaria": {
                 "actual": {
-                    "fecha": "11/12/2020",
+                    "fecha": "05/02/2021",
                     "patrimonio": "",
                     "vcpUnitario": "1.000000",
                     "vcp": "1000.0000",
                     "patrimonioNetoFondo": ""
                 },
-                "referenceDay": "11/12/2020",
+                "referenceDay": "05/02/2021",
                 "rendimientos": {
                     "day": {
-                        "fecha": "10/12/2020",
+                        "fecha": "04/02/2021",
                         "rendimiento": "0.0000",
                         "tna": "0.0000"
                     },
                     "month": {
-                        "fecha": "30/11/2020",
+                        "fecha": "29/01/2021",
                         "rendimiento": "0.0000",
                         "tna": "0.0000"
                     },
                     "oneYear": {
-                        "fecha": "11/12/2019",
-                        "rendimiento": "",
-                        "tna": ""
+                        "fecha": "05/02/2020",
+                        "rendimiento": "0.0000",
+                        "tna": "0.0000"
                     },
                     "threeYears": {
-                        "fecha": "11/12/2017",
+                        "fecha": "05/02/2018",
                         "rendimiento": "",
                         "tna": ""
                     },
                     "fiveYears": {
-                        "fecha": "11/12/2015",
+                        "fecha": "05/02/2016",
                         "rendimiento": "",
                         "tna": ""
                     },
                     "year": {
+                        "fecha": "30/12/2020",
+                        "rendimiento": "0.0000",
+                        "tna": "0.0000"
+                    },
+                    "yearM1": {
                         "fecha": "30/12/2019",
                         "rendimiento": "",
                         "tna": ""
                     },
-                    "yearM1": {
+                    "yearM2": {
                         "fecha": "28/12/2018",
                         "rendimiento": "0.0000",
-                        "tna": "0.0000"
+                        "tna": ""
                     },
-                    "yearM2": {
+                    "yearM3": {
                         "fecha": "29/12/2017",
                         "rendimiento": "",
                         "tna": ""
                     },
-                    "yearM3": {
+                    "yearM4": {
                         "fecha": "30/12/2016",
                         "rendimiento": "",
                         "tna": ""
                     },
-                    "yearM4": {
-                        "fecha": "31/12/2015",
-                        "rendimiento": "",
-                        "tna": ""
-                    },
                     "monthYear": {
-                        "fecha": "29/11/2019",
-                        "rendimiento": "",
-                        "tna": ""
+                        "fecha": "31/01/2020",
+                        "rendimiento": "0.0000",
+                        "tna": "0.0000"
                     }
                 }
             },
@@ -266,111 +267,107 @@
                 }
             },
             "semanal": {
-                "interfazId": "1253821",
-                "fechaDatos": "20/11/2020",
+                "interfazId": "1280991",
+                "fechaDatos": "22/01/2021",
                 "carteras": [{
                         "nombreActivo": "FCI Quinquela Pesos Clase B",
-                        "share": "0.106"
+                        "share": "0.102"
                     },
                     {
                         "nombreActivo": "ON Tecpetrol 2022",
-                        "share": "13.237"
+                        "share": "13.505"
                     },
                     {
                         "nombreActivo": "ON Telecom Argentina 2021",
-                        "share": "4.166"
+                        "share": "2.490"
                     },
                     {
                         "nombreActivo": "ON Pan Amer. Energy LLC",
-                        "share": "2.393"
+                        "share": "2.542"
                     },
                     {
                         "nombreActivo": "ON Capex S2",
-                        "share": "1.766"
+                        "share": "1.407"
                     },
                     {
                         "nombreActivo": "ON Cresud Clase 28",
-                        "share": "1.001"
+                        "share": "0.781"
                     },
                     {
                         "nombreActivo": "ON CGC Clase A",
-                        "share": "1.190"
+                        "share": "1.018"
                     },
                     {
                         "nombreActivo": "ON Petroqui C Rivadavia C2",
-                        "share": "2.494"
-                    },
-                    {
-                        "nombreActivo": "ON San Miguel Serie 3 CC",
-                        "share": "1.498"
+                        "share": "1.949"
                     },
                     {
                         "nombreActivo": "ON Transener Clase 2 REGS",
-                        "share": "2.812"
+                        "share": "2.293"
                     },
                     {
                         "nombreActivo": "ON MSU S7 B",
-                        "share": "3.034"
+                        "share": "2.300"
                     },
                     {
                         "nombreActivo": "ON Bco Galicia 190726",
-                        "share": "5.799"
+                        "share": "6.091"
                     },
                     {
                         "nombreActivo": "ON Pampa- Clase T",
-                        "share": "7.839"
+                        "share": "7.049"
                     },
                     {
                         "nombreActivo": "ON Arcor Clase 9",
-                        "share": "9.048"
+                        "share": "7.798"
                     },
                     {
                         "nombreActivo": "ON Telecom 2026",
-                        "share": "3.462"
+                        "share": "2.494"
                     },
                     {
                         "nombreActivo": "ON Bco Macro Clase 1 Regs",
-                        "share": "4.034"
+                        "share": "5.204"
                     },
                     {
                         "nombreActivo": "ON Pampa 240127",
-                        "share": "4.654"
+                        "share": "4.837"
                     },
                     {
                         "nombreActivo": "ON Vista Gas y Oil Arg C3",
-                        "share": "2.685"
-                    },
-                    {
-                        "nombreActivo": "ON Genneia Clase 21",
-                        "share": "4.115"
+                        "share": "2.064"
                     },
                     {
                         "nombreActivo": "ON Vista Gas y Oil Arg C2",
-                        "share": "2.235"
+                        "share": "1.797"
                     },
                     {
                         "nombreActivo": "ON Pan Amer. Energy C9",
-                        "share": "1.998"
+                        "share": "3.171"
                     },
                     {
                         "nombreActivo": "ON Transp Gas Sur Cl 2",
-                        "share": "5.965"
+                        "share": "12.825"
                     },
                     {
                         "nombreActivo": "ON Telecom C5",
-                        "share": "1.723"
+                        "share": "2.785"
+                    },
+                    {
+                        "nombreActivo": "ON Genneia Clase 30",
+                        "share": "1.105"
+                    },
+                    {
+                        "nombreActivo": "Cta Cte U$S Bco Valores",
+                        "share": "11.000"
                     },
                     {
                         "nombreActivo": "Cta Cte $ Bco de Valores",
                         "share": "0.000"
                     },
                     {
-                        "nombreActivo": "Cta Cte U$S Bco Valores",
-                        "share": "11.944"
-                    },
-                    {
                         "nombreActivo": "Cta Cte USC Citibank",
-                        "share": "0.802"
+                        "share": "3.395"
                     }
                 ]
             }

@@ -10,7 +10,9 @@ db_rendimientos = MongoDB.getCollection(collection_name='rendimientos')
 def getMessageToPost(item):
     diario= item["rendimientos"]["day"]
     mensual= item["rendimientos"]["month"]
-    message= str(item["nombre"]).replace("Infraestructura", "") + "\nDiario: " + str(diario["rendimiento"]) + "% | Mes: " +mensual["rendimiento"] + "% | TNA: "+ mensual["tna"] + "\n"
+    YTY= item["rendimientos"]["oneYear"]
+    YTD= item["rendimientos"]["year"]
+    message= str(item["nombre"]).replace("Infraestructura", "") + "\nDiario: " + str(diario["rendimiento"]) + "% | Mes: " +mensual["rendimiento"] + "% | YTD: "+ YTD["rendimiento"] + "\n"
     
     return message
 
@@ -76,7 +78,7 @@ message_post_Wallet=getFCIBilleteras()
 tweet_id=tw.post(message_post_Wallet,None).id
 
 #For por cada id de tipo de renta
-for i in ["2","3","4","5","6","7","8"]:
+for i in ["2","3","4","5","6","7"]:
     message_post = getTop3(i)
     try:
         tweet_id=tw.post(message_post,tweet_id).id
