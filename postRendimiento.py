@@ -40,9 +40,50 @@ def getTop3(tipo_rentaParam):
 
         if i==3:
             break
+    message_post=etiquetar(message_post)
 
     print(message_post)
     return message_post
+
+def etiquetar(message_post):
+
+    message_post+="\n"
+
+    if "Balanz" in message_post:
+        message_post += " @BalanzCapital "
+
+    if "Super" in message_post:
+            message_post += "@Santander_Ar "
+
+    if "Quinquela" in message_post:
+            message_post += "@QuinquelaFondos "
+    
+    if "IEB" in message_post:
+            message_post += "@Inverti_enBolsa "     
+    
+    if "Alpha" in message_post:
+            message_post += "@ICBCArgentina "     
+    
+    if "Galileo" in message_post:
+            message_post += "@GalileoFCI "   
+    
+    if "Argenfunds" in message_post:
+            message_post += "@argenfunds "  
+
+    return message_post           
+        
+    #@MarivaFondos
+    #@allarialedesma
+    #@bullmarketbrok
+    #@Inverti_enBolsa
+    #@CohenArgentina
+    #@Megainver
+    #@TavelliCia
+    #@BancoGalicia
+
+
+
+
 
 def getFCIBilleteras():
     fecha_hasta=datetime.today()- timedelta(days=1)
@@ -56,17 +97,22 @@ def getFCIBilleteras():
     fecha_publish=str(curs[0]["fecha"].strftime("%d/%m/%Y"))
     message_post_wallet="Rendimiento FCIs Billeteras del "+ fecha_publish+"\n\n"
     i=0
+    arrayPosted=[]
+
     for item in curs:
         fondo_id= item["fondo_id"]
+       
+        if(fondo_id not in arrayPosted):
+            message_post_wallet += getMessageToPost(item)
+            arrayPosted.append(fondo_id)    
 
-        message_post_wallet += getMessageToPost(item)
-        
-        if fondo_id=="443":
-            message_post_wallet += "@uala_arg @GRUPOSBSOK\n\n"
-        else:
-            message_post_wallet += "@mercadopago @BINDInversiones"
+            if fondo_id=="443":
+                message_post_wallet += "@uala_arg @GRUPOSBSOK\n\n"
+            else:
+                message_post_wallet += "@mercadopago @BINDInversiones"
+
         i+=1
-        if i==2:
+        if i==3:
             break
 
     print(message_post_wallet)
@@ -78,24 +124,13 @@ message_post_Wallet=getFCIBilleteras()
 tweet_id=tw.post(message_post_Wallet,None).id
 
 #For por cada id de tipo de renta
-for i in ["2","3","4","5","6","7"]:
+for i in ["4","2","3","5","6","7"]:
     message_post = getTop3(i)
     try:
         tweet_id=tw.post(message_post,tweet_id).id
     except:
         print("An exception occurred")
 
-message_at="@Santander_Ar @MarivaFondos @allarialedesma @bullmarketbrok @Inverti_enBolsa @BINDInversiones @BalanzCapital @argenfunds @CohenArgentina @Inverti_enBolsa"
+#  message_at="@Santander_Ar @MarivaFondos @allarialedesma @bullmarketbrok @Inverti_enBolsa @BINDInversiones @BalanzCapital @argenfunds @CohenArgentina @Inverti_enBolsa"
+#  tweet_id=tw.post(message_at,tweet_id).id
 
-tweet_id=tw.post(message_at,tweet_id).id
-
-#@Santander_Ar
-#@MarivaFondos
-#@allarialedesma
-#@bullmarketbrok
-#@Inverti_enBolsa
-#@BINDInversiones
-#@BalanzCapital
-#@argenfunds
-#@CohenArgentina
-#@Inverti_enBolsa

@@ -10,7 +10,7 @@ mongo_db = MongoClient()
 db = mongo_db.fciar
 db_patrimonio = db.patrimonio
 
-cotizacion_usd=88.00
+cotizacion_usd=93.50
 
 fecha_hasta=datetime.today()- timedelta(days=1)
 fecha_desde=general.getFechaDesde(fecha_hasta)
