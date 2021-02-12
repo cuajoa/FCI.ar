@@ -64,6 +64,9 @@ for item in db_clases.find():
                 nombre=data_converted["model"]["fondo"]["nombre"]
                 tickerBloomberg=data_converted["model"]["tickerBloomberg"]
                 gerente=data_converted["model"]["fondo"]["gerente"]["nombreCorto"]
+                gerente_nom=data_converted["model"]["fondo"]["gerente"]["nombre"]
+                horizonte=data_converted["model"]["fondo"]["horizonte"]["nombre"]
+                duration=data_converted["model"]["fondo"]["duration"]["nombre"]
 
                 # print(fecha)
                 # print(_id)
@@ -72,11 +75,24 @@ for item in db_clases.find():
                 # print(patrimonio)
                 # print(vcp)
 
+                not_esco=["Tutelar Inversora S.A.",
+                "BBVA Asset Management Argentina S.A.G.F.C.I.",
+                "HSBC Global Asset Management Argentina S.A.S.G.F.C.I.",
+                "C y C Administradora de Fondos S.A.",
+                "Mercofond S.G.F.C.I.S.A.",
+                "Bayfe S.A.S.G.F.C.I.",
+                "Nativa S.G.F.C.I.S.A."]
+
+                esEsco=True
+
+                if gerente_nom in not_esco:
+                    esEsco=False
+
                 try:
                     posted_id = mongo_db_insert.insert({"_id":_id, "fondo_id":fondo_id, "clase_id":clase_id, 
                     "tickerBloomberg":tickerBloomberg, "fecha":fecha, "nombre":nombre, "gerente":gerente,
-                    "moneda":moneda, "vcp": vcp, "patrimonio":patrimonio,"tipo_renta":tipo_renta, 
-                    "rendimientos":rendimientos})   
+                    "moneda":moneda, "vcp": vcp, "patrimonio":patrimonio,"tipo_renta":tipo_renta,
+                    "horizonte":horizonte,"duration":duration, "rendimientos":rendimientos, "esESCO":esEsco})   
                 except:
                     print("Error " + _id)
 

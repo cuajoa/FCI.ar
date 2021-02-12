@@ -13,7 +13,7 @@ from bson import Decimal128 as Decimal
 from datetime import datetime
 from common.connection import MongoDB
 
-counter=1250332
+counter=1270332 #30-12-2020
 
 #Obtengo el último ID
 # mongo_db = MongoClient(host='192.168.22.70', port=27017)
@@ -53,7 +53,6 @@ while True:
         not_esco=["Tutelar Inversora S.A.",
         "BBVA Asset Management Argentina S.A.G.F.C.I.",
         "HSBC Global Asset Management Argentina S.A.S.G.F.C.I.",
-        "Bull Market Asset Management S.A.",
         "C y C Administradora de Fondos S.A.",
         "Mercofond S.G.F.C.I.S.A.",
         "Bayfe S.A.S.G.F.C.I.",
