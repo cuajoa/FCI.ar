@@ -1,21 +1,19 @@
 # *-* coding: utf-8 *-*
 
-import matplotlib.pyplot as plt
-from pymongo import MongoClient
 from datetime import datetime, timedelta
 from common.general import general
 from decimal import Decimal
+from common.connection import MongoDB
+import matplotlib.pyplot as plt
 
-mongo_db = MongoClient()
-db = mongo_db.fciar
-db_patrimonio = db.patrimonio
+mongo_db = MongoDB.getCollection(collection_name='patrimonio')
 
-cotizacion_usd=93.50
+cotizacion_usd=93.75
 
 fecha_hasta=datetime.today()- timedelta(days=1)
-fecha_desde=general.getFechaDesde(fecha_hasta)
+fecha_desde=datetime.today()- timedelta(days=2)
 
-resultado = db_patrimonio.aggregate(
+resultado = mongo_db.aggregate(
     [{
         "$match":{
             "$and": [
@@ -51,9 +49,20 @@ for i in resultado:
 total=patrimonio_esco+patrimonio_restante
 
 print(patrimonio_esco)
-print((patrimonio_esco/total)*100)
-print((patrimonio_restante/total)*100)
+PN_Esco=(patrimonio_esco/total)*100
+PN_ot=(patrimonio_restante/total)*100
 
+
+labels = 'Esco', 'No Esco'
+sizes = [PN_Esco, PN_ot]
+explode = (0.1, 0)  
+
+fig1, ax1 = plt.subplots()
+ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
+        shadow=True, startangle=90)
+ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+
+plt.show()
 
 #  "$group": {
 #             "_id":["$esESCO","$data.Moneda"],
