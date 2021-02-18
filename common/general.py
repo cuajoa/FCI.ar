@@ -15,3 +15,19 @@ class general:
         fecha_desde=fecha.today()- timedelta(days=day_Diff)
 
         return fecha_desde
+
+    def IsEsco(name):   
+        not_esco=["Tutelar Inversora S.A.",
+        "BBVA Asset Management Argentina S.A.G.F.C.I.",
+        "HSBC Global Asset Management Argentina S.A.S.G.F.C.I.",
+        "C y C Administradora de Fondos S.A.",
+        "Mercofond S.G.F.C.I.S.A.",
+        "Bayfe S.A.S.G.F.C.I.",
+        "Nativa S.G.F.C.I.S.A."]
+
+        esEsco=True
+
+        if name in not_esco:
+            esEsco=False
+
+        return esEsco

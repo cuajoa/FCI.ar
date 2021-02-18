@@ -12,6 +12,7 @@ import requests
 from bson import Decimal128 as Decimal
 from datetime import datetime
 from common.connection import MongoDB
+from common.general import general
 
 counter=1270332 #30-12-2020
 
@@ -48,20 +49,7 @@ while True:
         fecha=datetime.strptime(data_converted["Cabecera"]["FechaReporte"], '%d-%m-%Y').strftime('%m-%d-%Y')
         patrimonio=data_converted["Pie"]["PieValor"].replace(',','')
 
-        #Incluir booleano EsEsco
-        #array con todas las SG de ESCO y chequear si existe o no
-        not_esco=["Tutelar Inversora S.A.",
-        "BBVA Asset Management Argentina S.A.G.F.C.I.",
-        "HSBC Global Asset Management Argentina S.A.S.G.F.C.I.",
-        "C y C Administradora de Fondos S.A.",
-        "Mercofond S.G.F.C.I.S.A.",
-        "Bayfe S.A.S.G.F.C.I.",
-        "Nativa S.G.F.C.I.S.A."]
-
-        esEsco=True
-
-        if cabecera["SGNombre"] in not_esco:
-            esEsco=False
+        esEsco=general.IsEsco(cabecera["SGNombre"])
         
         #print(esEsco)
         posted_id = mongo_db.insert({"_id":counter, "data":cabecera, "fecha":datetime.strptime(fecha,'%m-%d-%Y'), "patrimonio":Decimal(patrimonio), "esESCO":esEsco})

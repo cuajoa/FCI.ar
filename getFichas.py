@@ -6,6 +6,7 @@ import requests
 from bson import Decimal128 as Decimal
 from datetime import datetime
 from common.connection import MongoDB
+from common.general import general
 
 # Consulto los fondos para traer la ficha
 # mongo_db = MongoClient(host='192.168.22.70', port=27017)
@@ -75,18 +76,7 @@ for item in db_clases.find():
                 # print(patrimonio)
                 # print(vcp)
 
-                not_esco=["Tutelar Inversora S.A.",
-                "BBVA Asset Management Argentina S.A.G.F.C.I.",
-                "HSBC Global Asset Management Argentina S.A.S.G.F.C.I.",
-                "C y C Administradora de Fondos S.A.",
-                "Mercofond S.G.F.C.I.S.A.",
-                "Bayfe S.A.S.G.F.C.I.",
-                "Nativa S.G.F.C.I.S.A."]
-
-                esEsco=True
-
-                if gerente_nom in not_esco:
-                    esEsco=False
+                esEsco=general.IsEsco(gerente_nom)
 
                 try:
                     posted_id = mongo_db_insert.insert({"_id":_id, "fondo_id":fondo_id, "clase_id":clase_id, 
