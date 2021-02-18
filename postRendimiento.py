@@ -40,50 +40,10 @@ def getTop3(tipo_rentaParam):
 
         if i==3:
             break
-    message_post=etiquetar(message_post)
+    message_post=PostTwitter.etiquetar(message_post)
 
     print(message_post)
     return message_post
-
-def etiquetar(message_post):
-
-    message_post+="\n"
-
-    if "Balanz" in message_post:
-        message_post += " @BalanzCapital "
-
-    if "Super" in message_post:
-            message_post += "@Santander_Ar "
-
-    if "Quinquela" in message_post:
-            message_post += "@QuinquelaFondos "
-    
-    if "IEB" in message_post:
-            message_post += "@Inverti_enBolsa "     
-    
-    if "Alpha" in message_post:
-            message_post += "@ICBCArgentina "     
-    
-    if "Galileo" in message_post:
-            message_post += "@GalileoFCI "   
-    
-    if "Argenfunds" in message_post:
-            message_post += "@argenfunds "  
-
-    return message_post           
-        
-    #@MarivaFondos
-    #@allarialedesma
-    #@bullmarketbrok
-    #@Inverti_enBolsa
-    #@CohenArgentina
-    #@Megainver
-    #@TavelliCia
-    #@BancoGalicia
-
-
-
-
 
 def getFCIBilleteras():
     fecha_hasta=datetime.today()- timedelta(days=1)

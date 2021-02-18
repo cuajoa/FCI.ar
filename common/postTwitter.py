@@ -24,3 +24,41 @@ class PostTwitter(object):
                                     auto_populate_reply_metadata=True)
 
       return status
+
+   def etiquetar(message_post):
+
+      message_post+="\n"
+
+      if "Balanz" in message_post:
+         message_post += " @BalanzCapital "
+
+      if "Super" in message_post:
+               message_post += "@Santander_Ar "
+
+      if "Quinquela" in message_post:
+               message_post += "@QuinquelaFondos "
+      
+      if "IEB" in message_post:
+               message_post += "@Inverti_enBolsa "     
+      
+      if "Alpha" in message_post:
+               message_post += "@ICBCArgentina "     
+      
+      if "Galileo" in message_post:
+               message_post += "@GalileoFCI "   
+      
+      if "Argenfunds" in message_post:
+               message_post += "@argenfunds "  
+
+      if "Fima" in message_post:
+               message_post += "@BancoGalicia "  
+
+      return message_post       
+
+      #@MarivaFondos
+      #@allarialedesma
+      #@bullmarketbrok
+      #@Inverti_enBolsa
+      #@CohenArgentina
+      #@Megainver
+      #@TavelliCia
