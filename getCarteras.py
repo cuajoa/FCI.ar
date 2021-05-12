@@ -21,7 +21,7 @@ from common.general import general
 counter=1270332 #30-12-2020
 
 #Obtengo el último ID hasta el momento en la DB y le sumo 1
-collection = MongoDB.getCollection(collection_name='patrimonio')
+collection = MongoDB.getCollection(collection_name = 'patrimonio')
 
 curs = collection.find().limit(1).sort([("_id", -1)])
 for item in curs:
@@ -30,10 +30,10 @@ for item in curs:
 counter = counter + 1
 
 # Comienzo a recolectar la info
-mongo_db = MongoDB(collection_name='patrimonio')
+mongo_db = MongoDB(collection_name = 'patrimonio')
 
 while True:
-    url = 'https://api.cafci.org.ar/interfaz/semanal/resumen/cartera/'+str(counter)
+    url = f'https://api.cafci.org.ar/interfaz/semanal/resumen/cartera/{+str(counter)}'
     response = requests.get(url)
     data = response.json()
     
@@ -43,16 +43,16 @@ while True:
     if response.status_code != 200:
         print('Failed to get data:', response.status_code)
     else:
+        data_converted = data['data'][0]["dataXML"]
 
-        data_converted=data['data'][0]["dataXML"]
+        cabecera = data_converted["Cabecera"]
+        fecha = datetime.strptime(data_converted["Cabecera"]["FechaReporte"], '%d-%m-%Y').strftime('%m-%d-%Y')
+        patrimonio = data_converted["Pie"]["PieValor"].replace(',','')
 
-        cabecera=data_converted["Cabecera"]
-        fecha=datetime.strptime(data_converted["Cabecera"]["FechaReporte"], '%d-%m-%Y').strftime('%m-%d-%Y')
-        patrimonio=data_converted["Pie"]["PieValor"].replace(',','')
-
-        esEsco=general.IsEsco(cabecera["SGNombre"])
+        esEsco = general.IsEsco(cabecera["SGNombre"])
         
-        posted_id = mongo_db.insert({"_id":counter, "data":cabecera, "fecha":datetime.strptime(fecha,'%m-%d-%Y'), "patrimonio":Decimal(patrimonio), "esESCO":esEsco})
+        posted_id = mongo_db.insert({"_id": counter, "data": cabecera, "fecha": datetime.strptime(fecha,'%m-%d-%Y'), 
+                                    "patrimonio": Decimal(patrimonio), "esESCO": esEsco})
 
     counter = counter + 1
     print(counter)

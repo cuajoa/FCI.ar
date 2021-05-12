@@ -2,11 +2,11 @@ import tweepy
 
 class PostTwitter(object):
    # personal details 
-   my_consumer_key ="wh1bOA5mnfbDsjtUFfAw01Q59"
-   my_consumer_secret ="4k9z39AHyyPMhznSI1EDyr9JVqFZm3do2ZenrQ9dYqKVChlWK9"
-   my_access_token ="1328507402593980416-XqnVH4jmEKRM3wwGL1qrqnTlTHMuGE"
-   my_access_token_secret ="NfohErteVPbl7U1M4NKKEDmhG7zWIfrCOIwICFxiCDbA3"   
-   my_api=None
+   my_consumer_key = "wh1bOA5mnfbDsjtUFfAw01Q59"
+   my_consumer_secret = "4k9z39AHyyPMhznSI1EDyr9JVqFZm3do2ZenrQ9dYqKVChlWK9"
+   my_access_token = "1328507402593980416-XqnVH4jmEKRM3wwGL1qrqnTlTHMuGE"
+   my_access_token_secret = "NfohErteVPbl7U1M4NKKEDmhG7zWIfrCOIwICFxiCDbA3"   
+   my_api = None
 
    def __init__(self):
       # authentication of consumer key and secret 
@@ -17,7 +17,7 @@ class PostTwitter(object):
 
    def post(self,message_post, tweet_id_parent):
       if tweet_id_parent is None :
-         status=self.my_api.update_status(status=message_post,auto_populate_reply_metadata=True)
+         status = self.my_api.update_status(status=message_post,auto_populate_reply_metadata=True)
       else:
          status = self.my_api.update_status(status=message_post, 
                                     in_reply_to_status_id=tweet_id_parent, 
@@ -27,7 +27,7 @@ class PostTwitter(object):
 
    def etiquetar(message_post):
 
-      message_post+="\n"
+      message_post += "\n"
 
       if "Balanz" in message_post:
          message_post += " @BalanzCapital "
