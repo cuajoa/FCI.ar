@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta
+from decimal import Decimal
 
 class general:
 
@@ -31,3 +32,9 @@ class general:
             esEsco=False
 
         return esEsco
+
+    def FormatDecimal(number):
+        dec= f'{Decimal(number):,}'
+        retNumFormat=dec.replace(',', ' ').replace('.', ',').replace(' ', '.')
+
+        return retNumFormat
