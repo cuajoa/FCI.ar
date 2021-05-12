@@ -55,10 +55,10 @@ class PostTwitter(object):
 
       return message_post       
 
-      #@MarivaFondos
-      #@allarialedesma
-      #@bullmarketbrok
-      #@Inverti_enBolsa
-      #@CohenArgentina
-      #@Megainver
-      #@TavelliCia
+      # @MarivaFondos
+      # @allarialedesma
+      # @bullmarketbrok
+      # @Inverti_enBolsa
+      # @CohenArgentina
+      # @Megainver
+      # @TavelliCia

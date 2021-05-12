@@ -18,9 +18,9 @@ from datetime import datetime
 from common.connection import MongoDB
 from common.general import general
 
-counter=1270332 #30-12-2020
+counter = 1270332 # 30-12-2020
 
-#Obtengo el último ID hasta el momento en la DB y le sumo 1
+# Obtengo el último ID hasta el momento en la DB y le sumo 1
 collection = MongoDB.getCollection(collection_name = 'patrimonio')
 
 curs = collection.find().limit(1).sort([("_id", -1)])

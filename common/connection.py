@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 
-_host='192.168.22.94'
-_port=27017
+_host = '192.168.22.94'
+_port = 27017
 
 class MongoDB(object):
     def __init__(self, database_name = 'fciar', collection_name = None):

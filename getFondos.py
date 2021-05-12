@@ -21,32 +21,32 @@ if response.status_code != 200:
     print('Failed to get data:', response.status_code)
 else:
     mongo_db = MongoDB(collection_name='fondos')
-    data=data['data']
+    data = data['data']
 
-    #print(data)
+    # print(data)
 
     for item in data:
-        gerente_nom=item["gerente"]["nombre"]
+        gerente_nom = item["gerente"]["nombre"]
 
-        nombre=item["nombre"]
-        gerente=item["gerente"]["nombreCorto"]
-        plazo=item['diasLiquidacion']
-        fechaInicio=item['inicio']
-        depositaria=item["depositaria"]["nombre"]
-        tipoRenta=item["tipoRenta"]["nombre"]
-        horizonte=item["horizonte"]["nombre"]
-        tipoFondo=item["tipoFondo"]["nombre"]
-        duration=item["duration"]["nombre"]
-        moneda=item["moneda"]["codigoCafci"]
+        nombre = item["nombre"]
+        gerente = item["gerente"]["nombreCorto"]
+        plazo = item['diasLiquidacion']
+        fechaInicio = item['inicio']
+        depositaria = item["depositaria"]["nombre"]
+        tipoRenta = item["tipoRenta"]["nombre"]
+        horizonte = item["horizonte"]["nombre"]
+        tipoFondo = item["tipoFondo"]["nombre"]
+        duration = item["duration"]["nombre"]
+        moneda = item["moneda"]["codigoCafci"]
         
-        esEsco=general.IsEsco(gerente_nom)
+        esEsco = general.IsEsco(gerente_nom)
         
         _id = item["id"]
         posted_id = mongo_db.insert({"_id":_id,
         "nombre": nombre, "gerente":gerente, 
-        "plazo": plazo, "fechaInicio": fechaInicio, "depositaria":depositaria, 
-        "tipoRenta": tipoRenta, "horizonte":horizonte, "tipoFondo": tipoFondo, 
-        "duration":duration, "moneda": moneda, "esESCO":esEsco} )
+        "plazo": plazo, "fechaInicio": fechaInicio, "depositaria": depositaria, 
+        "tipoRenta": tipoRenta, "horizonte": horizonte, "tipoFondo": tipoFondo, 
+        "duration": duration, "moneda": moneda, "esESCO": esEsco} )
 
         print(posted_id)
 
