@@ -11,9 +11,9 @@ db_rendimientos = MongoDB.getCollection(collection_name='rendimientos')
 
 # :::::::::::::::::::::::::
 # Parametros de la consulta
-postea=True
-top=15
-delta=1
+postea = True
+top = 15
+delta = 1
 # :::::::::::::::::::::::::
 
 def getMessageToPost(item):
@@ -25,16 +25,17 @@ def getMessageToPost(item):
     
     return message
 
+
 def getTop3(tipo_rentaParam):
     # Obtengo el top 3 de los fondos por tipo de renta
-    fecha_hasta=datetime.today()- timedelta(days=delta)
+    fecha_hasta=datetime.today() - timedelta(days = delta)
 
     fecha_desde = general.getFechaDesde(fecha_hasta)
-    curs = db_rendimientos.find({"moneda": "ARS", "tipo_renta.id": tipo_rentaParam, "fecha": {"$gte" : fecha_desde, "$lt": fecha_hasta } }).sort([("rendimientos.day.rendimiento", -1), ("rendimientos.year.rendimiento", -1)]).limit(top)
+    curs = db_rendimientos.find({"moneda": "ARS", "tipo_renta.id": tipo_rentaParam, "fecha": {"$gte": fecha_desde, "$lt": fecha_hasta}}).sort([("rendimientos.day.rendimiento", -1), ("rendimientos.year.rendimiento", -1)]).limit(top)
 
     fecha_publish = str(curs[0]["fecha"].strftime("%d/%m/%Y"))
     tipo_renta = curs[0]["tipo_renta"]["nombre"]
-    message_post=f"TOP 3 FCIs {tipo_renta} del {fecha_publish}\n\n"
+    message_post = f"TOP 3 FCIs {tipo_renta} del {fecha_publish}\n\n"
     i = 0
     arrayPosted = []
     for item in curs:
@@ -53,6 +54,7 @@ def getTop3(tipo_rentaParam):
 
     print(message_post)
     return message_post
+
 
 def getFCIBilleteras():
     fecha_hasta = datetime.today() - timedelta(days = delta)
@@ -84,8 +86,10 @@ def getFCIBilleteras():
         if i == 3:
             break
 
-    print(message_post_wallet)
+        print(message_post_wallet)
+        
     return message_post_wallet
+
 
 tw=PostTwitter()
 # Fondos de Billeteras
