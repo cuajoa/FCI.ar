@@ -1,6 +1,6 @@
 # FCI.ar
 
-[![Python application](https://github.com/cuajoa/FCI.ar/actions/workflows/python-app.yml/badge.svg)](https://github.com/cuajoa/FCI.ar/actions/workflows/python-app.yml)
+[![Python](https://github.com/cuajoa/FCI.ar/actions/workflows/python-app.yml/badge.svg)](https://github.com/cuajoa/FCI.ar/actions/workflows/python-app.yml) [![CodeQL](https://github.com/cuajoa/FCI.ar/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/cuajoa/FCI.ar/actions/workflows/codeql-analysis.yml)
 
 FCI.ar es un bot que publica información de los Fondos Comunes de Inversión.
 
