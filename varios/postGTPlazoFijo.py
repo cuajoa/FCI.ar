@@ -3,15 +3,13 @@
 # {"rendimientos.day.tna": { $gte:"37"}, "tipo_renta.id":{ $in:["3","4"] }}
 
 from common.general import general
-from common.postTwitter import PostTwitter
-from pymongo import MongoClient
 from datetime import datetime, timedelta
 from common.general import general
 from common.connection import MongoDB
 
 mongo_db = MongoDB.getCollection(collection_name='rendimientos')
 
-tasa_PF=37
+tasa_PF = 37
 
 def getTop3(tipo_renta):
     # Obtengo el top 3 de los fondos Mercado de Dinero id=3 y Renta Fija id=4 que rinden mas que un PF
@@ -39,5 +37,6 @@ def getTop3(tipo_renta):
 
     print(message_post)
     return message_post
+
 
 getTop3(3)

@@ -11,31 +11,47 @@ db_rendimientos = MongoDB.getCollection(collection_name='rendimientos')
 
 # :::::::::::::::::::::::::
 # Parametros de la consulta
-postea = True
-top = 15
-delta = 1
+__postea = True
+__top = 15
+__delta = 1
 # :::::::::::::::::::::::::
 
 def getMessageToPost(item):
     diario = item["rendimientos"]["day"]
     mensual = item["rendimientos"]["month"]
     # YTY= item["rendimientos"]["oneYear"]
-    YTD = item["rendimientos"]["year"]
+    YTD = getYTD(item["fondo_id"]) #item["rendimientos"]["year"]
     message = f'{str(item["nombre"]).replace("Infraestructura", "")} \nDiario: {str(diario["rendimiento"])}% | Mes: {mensual["rendimiento"]}% | YTD: {YTD["rendimiento"]} \n'
     
     return message
 
-
-def getTop3(tipo_rentaParam):
-    # Obtengo el top 3 de los fondos por tipo de renta
-    fecha_hasta=datetime.today() - timedelta(days = delta)
+def getYTD(fondo_id):
+    fecha_hasta=datetime.today() - timedelta(days = __delta)
 
     fecha_desde = general.getFechaDesde(fecha_hasta)
-    curs = db_rendimientos.find({"moneda": "ARS", "tipo_renta.id": tipo_rentaParam, "fecha": {"$gte": fecha_desde, "$lt": fecha_hasta}}).sort([("rendimientos.day.rendimiento", -1), ("rendimientos.year.rendimiento", -1)]).limit(top)
+    curs = db_rendimientos.find({"fondo_id": fondo_id, "fecha": {"$gte": fecha_desde, "$lt": fecha_hasta}, "rendimientos.day.rendimiento": {"$ne":'0.0000'}}).sort([("rendimientos.year.rendimiento", -1)]).limit(1)
+
+    for item in curs:
+        YTD = item["rendimientos"]["year"]
+        fondo_id = item["fondo_id"]
+
+        # print( f"fondo_id {fondo_id} YTD {YTD}")
+
+    return YTD
+
+
+def getTop3(tipo_rentaParam, moneda):
+    # Obtengo el top 3 de los fondos por tipo de renta
+    fecha_hasta=datetime.today() - timedelta(days = __delta)
+
+    fecha_desde = general.getFechaDesde(fecha_hasta)
+    curs = db_rendimientos.find({"moneda": moneda, "tipo_renta.id": tipo_rentaParam, "fecha": {"$gte": fecha_desde, "$lt": fecha_hasta}, "rendimientos.day.rendimiento": {"$ne":'0.0000'}}).sort([("rendimientos.day.rendimiento", -1), ("rendimientos.year.rendimiento", -1)]).limit(__top)
 
     fecha_publish = str(curs[0]["fecha"].strftime("%d/%m/%Y"))
     tipo_renta = curs[0]["tipo_renta"]["nombre"]
-    message_post = f"TOP 3 FCIs {tipo_renta} del {fecha_publish}\n\n"
+
+    message_post = f"TOP 3 FCIs ${moneda} {tipo_renta} del {fecha_publish}\n\n"
+    
     i = 0
     arrayPosted = []
     for item in curs:
@@ -57,52 +73,64 @@ def getTop3(tipo_rentaParam):
 
 
 def getFCIBilleteras():
-    fecha_hasta = datetime.today() - timedelta(days = delta)
-
-    print(fecha_hasta)
-
+    fecha_hasta = datetime.today() - timedelta(days = __delta)
     fecha_desde = general.getFechaDesde(fecha_hasta)
-    print(fecha_desde)
-    curs = db_rendimientos.find({"fondo_id": {"$in": ["798", "443"]}, "fecha": {"$gte" : fecha_desde, "$lt": fecha_hasta}}).sort([("rendimientos.day.rendimiento", -1)]).limit(top)
 
-    fecha_publish = str(curs[0]["fecha"].strftime("%d/%m/%Y"))
-    message_post_wallet = f"Rendimiento FCIs Billeteras del {fecha_publish}\n\n"
+    curs = db_rendimientos.find({"fondo_id": {"$in": ["798", "443"]}, "fecha": {"$gte" : fecha_desde, "$lt": fecha_hasta}, "rendimientos.day.rendimiento": {"$ne":'0.0000'}}).sort([("rendimientos.day.rendimiento", -1)]).limit(__top)
+
+    if curs.count() > 0:
+        _fecha_publish = str(curs[0]["fecha"].strftime("%d/%m/%Y"))
+        _message_post_wallet = f"Rendimiento FCIs Billeteras del {_fecha_publish}\n\n"
+        
     i = 0
     arrayPosted = []
 
     for item in curs:
-        fondo_id= item["fondo_id"]
+        fondo_id = item["fondo_id"]
        
         if(fondo_id not in arrayPosted):
-            message_post_wallet += getMessageToPost(item)
+            _message_post_wallet += getMessageToPost(item)
             arrayPosted.append(fondo_id)    
 
             if fondo_id == "443":
-                message_post_wallet += "@uala_arg @GRUPOSBSOK\n\n"
+                _message_post_wallet += "@uala_arg @GRUPOSBSOK\n\n"
             else:
-                message_post_wallet += "@mercadopago @BINDInversiones\n\n"
+                _message_post_wallet += "@mercadopago @BINDInversiones\n\n"
 
         i += 1
         if i == 3:
             break
 
-        print(message_post_wallet)
-        
-    return message_post_wallet
+        print(_message_post_wallet)
+
+    return _message_post_wallet
 
 
-tw=PostTwitter()
+tw = PostTwitter()
 # Fondos de Billeteras
 message_post_Wallet = getFCIBilleteras()
-if postea:
+if __postea:
     tweet_id = tw.post(message_post_Wallet,None).id
 
-# For por cada id de tipo de renta
-for i in ["4","2","3","5","6","7"]:
-    message_post = getTop3(i)
+# For por cada id de tipo de renta ARS
+for idRenta in ["4","2","3","5","6","7"]:
+    # Excluyo el tipo de renta 6 para USD
+    message_post = getTop3(idRenta, "ARS")
+    print(len(message_post))
     try:
-        if postea:
+        if __postea:
             tweet_id = tw.post(message_post,tweet_id).id
     except:
-       print("An exception occurred")
+        print("An exception occurred")
 
+twUSD = PostTwitter()
+tweet_idUSD=None
+# For por cada id de tipo de renta USD
+for idRenta in ["4","2","3","5","7"]:
+    message_post = getTop3(idRenta, "USD")
+    print(len(message_post))
+    try:
+        if __postea:
+            tweet_idUSD = twUSD.post(message_post, tweet_idUSD).id
+    except:
+        print("An exception occurred")

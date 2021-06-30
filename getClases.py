@@ -34,6 +34,7 @@ else:
 
             print(posted_id)
 
+
 response.close()
 # Fin de insert
 

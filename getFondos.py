@@ -11,7 +11,7 @@ from common.connection import MongoDB
 from common.general import general
 
 # Comienzo a recolectar la info
-i=1
+i = 1
 
 url = 'https://api.cafci.org.ar/fondo?estado=1&include=entidad;depositaria,entidad;gerente,tipoRenta,moneda,horizonte,duration,tipo_fondo&limit=0&order=fondo.nombre'
 response = requests.get(url)
@@ -49,6 +49,7 @@ else:
         "duration": duration, "moneda": moneda, "esESCO": esEsco} )
 
         print(posted_id)
+
 
 response.close()
 # Fin de insert

@@ -16,7 +16,7 @@ from common.general import general
 # Consulto los fondos para traer la ficha
 db_clases = MongoDB.getCollection(collection_name='clases')
 
-print("start @ " + str(datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
+print(f'start @ {str(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))}')
 mongo_db_insert = MongoDB(collection_name = 'rendimientos')
 
 for item in db_clases.find():
@@ -82,4 +82,5 @@ for item in db_clases.find():
                 print(_id)
                 response.close()
 
-print("end @ " + str(datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
+
+print(f'end @ {str(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))}')
