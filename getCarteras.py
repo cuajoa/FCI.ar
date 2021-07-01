@@ -33,7 +33,7 @@ counter = counter + 1
 mongo_db = MongoDB(collection_name = 'patrimonio')
 
 while True:
-    url = f'https://api.cafci.org.ar/interfaz/semanal/resumen/cartera/{+str(counter)}'
+    url = f'https://api.cafci.org.ar/interfaz/semanal/resumen/cartera/{str(counter)}'
     response = requests.get(url)
     data = response.json()
     
