@@ -2,6 +2,23 @@
 # Postea fondos que rinde mas que un PF
 # {"rendimientos.day.tna": { $gte:"37"}, "tipo_renta.id":{ $in:["3","4"] }}
 
+
+import sys
+import os
+
+# getting the name of the directory
+# where the this file is present.
+current = os.path.dirname(os.path.realpath(__file__))
+
+# Getting the parent directory name
+# where the current directory is present.
+parent = os.path.dirname(current)
+
+# adding the parent directory to
+# the sys.path.
+sys.path.append(parent)
+
+
 from common.general import general
 from datetime import datetime, timedelta
 from common.general import general
@@ -9,21 +26,24 @@ from common.connection import MongoDB
 
 mongo_db = MongoDB.getCollection(collection_name='rendimientos')
 
-tasa_PF = 37
+__tasa_PF = 37
 
 def getTop3(tipo_renta):
     # Obtengo el top 3 de los fondos Mercado de Dinero id=3 y Renta Fija id=4 que rinden mas que un PF
     fecha_hasta = datetime.today()- timedelta(days=1)
 
     fecha_desde = general.getFechaDesde(fecha_hasta)- timedelta(days=4)
-    curs = mongo_db.find({"moneda":"ARS", "tipo_renta.id":tipo_renta,"rendimientos.day.tna": {"$gte":tasa_PF}, "fecha":{"$gte" : fecha_desde, "$lt": fecha_hasta } }).sort([("rendimientos.day.rendimiento", -1)]).limit(15)
+    curs = mongo_db.find({"moneda": "ARS", "tipo_renta.id": tipo_renta, "rendimientos.day.tna": {"$gte": __tasa_PF}, "fecha": {
+                         "$gte": fecha_desde, "$lt": fecha_hasta}}).sort([("rendimientos.day.rendimiento", -1)]).limit(15)
 
-    fecha_publish = str(curs[0]["fecha"].strftime("%d/%m/%Y"))
-    tipo_renta = curs[0]["tipo_renta"]["nombre"]
-    message_post = f"TOP 3 FCIs {tipo_renta} con tasa símil al Plazo Fijo del {fecha_publish}\n\n"
+
     i = 0
     arrayPosted = []
     for item in curs:
+        fecha_publish = str(curs[0]["fecha"].strftime("%d/%m/%Y"))
+        tipo_renta = curs[0]["tipo_renta"]["nombre"]
+        message_post = f"TOP 3 FCIs {tipo_renta} con tasa símil al Plazo Fijo del {fecha_publish}\n\n"
+    
         diario = item["rendimientos"]["day"]
         fondo_id = item["fondo_id"]
 
