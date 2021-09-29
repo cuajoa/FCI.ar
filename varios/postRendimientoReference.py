@@ -5,7 +5,9 @@
 from common.postTwitter import PostTwitter
 from datetime import datetime, timedelta
 from common.general import general
-import requests, urllib.parse, urllib.error
+import requests
+import urllib.parse
+import urllib.error
 import json
 import urllib.request as urllib2
 
@@ -17,34 +19,35 @@ __delta = 1
 # :::::::::::::::::::::::::
 
 
-
 def getTop3(tipo_renta, moneda):
     headers = {
         'Cache-Control': 'no-cache',
-        'Ocp-Apim-Subscription-Key' : 'WJmpcoO2FAjPqHqzYZPjdzm8ZCYhEb6TiI6c9YPNzeSIWe66tQPSbCTlnOKVBCnlLWtvc1McrLQ2dxt6zbC271UsHmb7tK1p7fixf2XJS7Qqc7w4iwGxXjHjd6p6ik'
+        'Ocp-Apim-Subscription-Key': 'WJmpcoO2FAjPqHqzYZPjdzm8ZCYhEb6TiI6c9YPNzeSIWe66tQPSbCTlnOKVBCnlLWtvc1McrLQ2dxt6zbC271UsHmb7tK1p7fixf2XJS7Qqc7w4iwGxXjHjd6p6ik'
     }
 
     params = urllib.parse.urlencode({
-        '$filter':f"type eq 'MF' and performanceDay ne '0.0000' and rentTypeId eq '{tipo_renta}' and currency eq '{moneda}'",
-        '$select':'symbol,underlyingSymbol,date,performanceDay,performanceMtd,performanceYtd,performanceYear,currency',
-        'orderby':'performanceDay DESC'
+        '$filter': f"type eq 'MF' and performanceDay ne '0.0000' and rentTypeId eq '{tipo_renta}' and currency eq '{moneda}'",
+        '$select': 'symbol,underlyingSymbol,date,performanceDay,performanceMtd,performanceYtd,performanceYear,currency',
+        'orderby': 'performanceDay DESC'
     })
 
     try:
-        request = urllib2.Request('https://apids.primary.com.ar/prd-ro/v3/api/Schemas/schema-000/Data/by-odata', params, headers)
+        request = urllib2.Request(
+            'https://apids.primary.com.ar/prd-ro/v3/api/Schemas/schema-000/Data/by-odata', params, headers)
         response = request.getresponse()
         data = response.read()
 
         # response = requests.get("https://apids.primary.com.ar/prd-ro/v3/api/Schemas/schema-000/Data/by-odata", params=params, headers=headers)
         # data = response.json()
 
-        json_raw= response.readlines()
+        json_raw = response.readlines()
         json_object = json.loads(json_raw[0])
 
         try:
-            results = [x for x in json_object['fields'] if 'performanceDay' in x]
+            results = [x for x in json_object['fields']
+                       if 'performanceDay' in x]
             sorted(results, key=lambda x: x['performanceDay'])
-        except KeyError: 
+        except KeyError:
             pass
 
         # print(fewest_issues_sort)
@@ -54,20 +57,14 @@ def getTop3(tipo_renta, moneda):
     ####################################
 
 
-
-
-
-
-
 # def getMessageToPost(item):
 #     diario = item["rendimientos"]["day"]
 #     mensual = item["rendimientos"]["month"]
 #     # YTY= item["rendimientos"]["oneYear"]
 #     YTD = getYTD(item["fondo_id"]) #item["rendimientos"]["year"]
 #     message = f'{str(item["nombre"]).replace("Infraestructura", "")} \nDiario: {str(diario["rendimiento"])}% | Mes: {mensual["rendimiento"]}% | YTD: {YTD["rendimiento"]} \n'
-    
-#     return message
 
+#     return message
 
 
 # def getTop3(tipo_rentaParam, moneda):
@@ -81,7 +78,7 @@ def getTop3(tipo_renta, moneda):
 #     tipo_renta = curs[0]["tipo_renta"]["nombre"]
 
 #     message_post = f"TOP 3 FCIs ${moneda} {tipo_renta} del {fecha_publish}\n\n"
-    
+
 #     i = 0
 #     arrayPosted = []
 #     for item in curs:
@@ -90,7 +87,7 @@ def getTop3(tipo_renta, moneda):
 
 #         if fondo_id not in arrayPosted:
 #             if diario["rendimiento"] < "30":
-#                 message_post += getMessageToPost(item) 
+#                 message_post += getMessageToPost(item)
 #                 i += 1
 #                 arrayPosted.append(fondo_id)
 
@@ -111,31 +108,26 @@ def getTop3(tipo_renta, moneda):
 #     if curs.count() > 0:
 #         _fecha_publish = str(curs[0]["fecha"].strftime("%d/%m/%Y"))
 #         _message_post_wallet = f"Rendimiento FCIs Billeteras del {_fecha_publish}\n\n"
-        
+
 #     i = 0
 #     arrayPosted = []
 
 #     for item in curs:
 #         fondo_id = item["fondo_id"]
-       
+
 #         if(fondo_id not in arrayPosted):
 #             _message_post_wallet += getMessageToPost(item)
-#             arrayPosted.append(fondo_id)    
+#             arrayPosted.append(fondo_id)
 
 #             if fondo_id == "443":
 #                 _message_post_wallet += "@uala_arg @GRUPOSBSOK\n\n"
 #             else:
 #                 _message_post_wallet += "@mercadopago @BINDInversiones\n\n"
-
 #         i += 1
 #         if i == 3:
 #             break
-
 #         print(_message_post_wallet)
-
 #     return _message_post_wallet
-
-
 tw = PostTwitter()
 # Fondos de Billeteras
 # message_post_Wallet = getFCIBilleteras()
@@ -143,12 +135,12 @@ tw = PostTwitter()
 #     tweet_id = tw.post(message_post_Wallet,None).id
 
 # For por cada id de tipo de renta ARS
-for idRenta in ["4","2","3","5","6","7"]:
+for idRenta in ["4", "2", "3", "5", "6", "7"]:
     # Excluyo el tipo de renta 6 para USD
     message_post = getTop3(idRenta, "ARS")
     try:
         if __postea:
-            tweet_id = tw.post(message_post,tweet_id).id
+            tweet_id = tw.post(message_post, None).id
     except:
         print("An exception occurred")
 
