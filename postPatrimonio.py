@@ -11,16 +11,17 @@ from datetime import datetime, timedelta
 # Parametros de la consulta
 __postea = True
 __top = 5
-__delta = 2
+__delta = 1
 # :::::::::::::::::::::::::
 
 mongo_db = MongoDB.getCollection(collection_name='patrimonio')
 
-fecha_hasta = datetime.today()- timedelta(days = 1 + __delta)
-fecha_desde = fecha_hasta.today()- timedelta(days = 2 + __delta)
-curs = mongo_db.find({"data.Moneda": "Peso Argentina", "fecha":{"$gte" : fecha_desde, "$lt": fecha_hasta}}).sort([("patrimonio", -1)]).limit(__top)
+fecha_hasta = datetime.today() - timedelta(days=__delta)
+fecha_desde = fecha_hasta.today() - timedelta(days=__delta)
+curs = mongo_db.find({"data.Moneda": "Peso Argentina", "fecha": {
+                     "$gte": fecha_desde, "$lt": fecha_hasta}}).sort([("patrimonio", -1)]).limit(__top)
 
-message_post=f'Fondos en pesos con Mayor Patrimonio al {str(fecha_hasta.strftime("%d/%m/%Y"))}\n\n'
+message_post = f'Fondos en pesos con Mayor Patrimonio al {str(fecha_hasta.strftime("%d/%m/%Y"))}\n\n'
 
 for item in curs:
     PatNet = general.FormatDecimal(str(item["patrimonio"]))
@@ -33,4 +34,6 @@ print(message_post)
 
 if __postea:
     tw = PostTwitter()
-    tw.post(message_post,None)
+    tw.post(message_post, None)
+
+mongo_db.close()
