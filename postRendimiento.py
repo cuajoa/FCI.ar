@@ -11,9 +11,9 @@ db_rendimientos = MongoDB.getCollection(collection_name='rendimientos')
 
 # :::::::::::::::::::::::::
 # Parametros de la consulta
-__postea = False
+__postea = True
 __top = 15
-__delta = 2
+__delta = 1
 # :::::::::::::::::::::::::
 
 
