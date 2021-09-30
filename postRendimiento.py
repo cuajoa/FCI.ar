@@ -11,9 +11,9 @@ db_rendimientos = MongoDB.getCollection(collection_name='rendimientos')
 
 # :::::::::::::::::::::::::
 # Parametros de la consulta
-__postea = True
+__postea = False
 __top = 15
-__delta = 1
+__delta = 2
 # :::::::::::::::::::::::::
 
 
@@ -83,6 +83,7 @@ def getFCIBilleteras():
     curs = db_rendimientos.find({"fondo_id": {"$in": ["798", "443"]}, "fecha": {"$gte": fecha_desde, "$lt": fecha_hasta}, "rendimientos.day.rendimiento": {
                                 "$ne": '0.0000'}}).sort([("rendimientos.day.rendimiento", -1)]).limit(__top)
 
+    _message_post_wallet = ''
     if curs.count() > 0:
         _fecha_publish = str(curs[0]["fecha"].strftime("%d/%m/%Y"))
         _message_post_wallet = f"Rendimiento FCIs Billeteras del {_fecha_publish}\n\n"

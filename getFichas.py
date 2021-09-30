@@ -13,12 +13,15 @@ from datetime import datetime, timedelta
 from common.connection import MongoDB
 from common.general import general
 
-__today = datetime.today() - timedelta(days=1)
+__now = datetime.today() - timedelta(days=1)
+__today = __now.strftime('%d/%m/%Y')
+__fecha = datetime.strptime(__today, '%d/%m/%Y')
+
 
 def notExistFicha(_fondo_id, _clase_id):
     # Consulto cuales fichas ya tengo en la DB para la fecha de hoy
 
-    __id = f"{__today.strftime('%Y%m%d')}_{_fondo_id}_{_clase_id}"
+    __id = f"{__now.strftime('%Y%m%d')}_{_fondo_id}_{_clase_id}"
 
     print(__id)
     rendimientos = MongoDB.getCollection(collection_name='rendimientos')
@@ -66,7 +69,7 @@ def getFichas():
 
                     fecha = datetime.strptime(fecha_data, '%d/%m/%Y')
 
-                    if fecha == __today:
+                    if fecha == __fecha:
                         _id = f"{fecha.strftime('%Y%m%d')}_{fondo_id}_{clase_id}"
 
                         print(f'{_id} Inserted')
@@ -92,8 +95,7 @@ def getFichas():
                                                                 "tickerBloomberg": tickerBloomberg, "fecha": fecha, "nombre": nombre, "gerente": gerente,
                                                                 "moneda": moneda, "vcp": vcp, "patrimonio": patrimonio, "tipo_renta": tipo_renta,
                                                                 "horizonte": horizonte, "duration": duration, "rendimientos": rendimientos, "esESCO": esEsco})
-                            mongo_db_insert.close()
-                        except:
+                        except Exception as e:
                             print("Error " + _id)
 
                     response.close()
