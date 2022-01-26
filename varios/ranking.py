@@ -26,8 +26,12 @@ def getRanking():
     print('Type of df:', type(df))
 
     # Printing the df to console
-    print()
+    print()# function to get any value and return add
+
     print(df.head())
 
 
 getRanking()
+
+
+

@@ -104,10 +104,10 @@ def getFCIBilleteras():
                 _message_post_wallet += "@mercadopago @BINDInversiones\n\n"
 
         i += 1
-        if i == 3:
+        if i == 6:
             break
 
-        print(_message_post_wallet)
+    print(_message_post_wallet)
 
     return _message_post_wallet
 
