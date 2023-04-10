@@ -2,7 +2,7 @@
 ''' 
     Calcula los fondos que mas rindieron y los publica en Twitter
 '''
-from common. postTwitter import PostTwitter
+from common.postTwitter import PostTwitter
 from datetime import date, datetime, timedelta
 from common.general import general
 from common.connection import MongoDB
